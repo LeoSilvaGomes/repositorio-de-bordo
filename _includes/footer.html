@@ -3,36 +3,29 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Your awesome title</h2>
+    <h2 class="footer-heading">{{site.title}}</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Your awesome title</li>
-          <li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li>
+          <li class="p-name">{{site.title}}</li>
+          <li><a class="u-email" href="mailto:your-email@example.com">{{site.url}}</a></li>
         </ul>
       </div>
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          <li><a href="https://www.facebook.com/lappisunb5"><svg class="svg-icon">
-            <use xlink:href="{{site.baseurl}}/assets/minima-social-icons.svg#facebook"></use> 
-            </svg> <span class="username">lappisunb5</span></a></li>
-          <li><a href="https://github.com/lappis-unb"><svg class="svg-icon">
+          <li><a href="https://github.com/{{site.github_username}}"><svg class="svg-icon">
                 <use xlink:href="{{site.baseurl}}/assets/minima-social-icons.svg#github"></use>
-              </svg> <span class="username">lappis-unb</span></a></li>
-          <li><a href="https://instagram.com/lappisunb"><svg class="svg-icon">
+              </svg> <span class="username">{{site.github_username}}</span></a></li>
+          <li><a href="https://instagram.com/{{site.instagram_username}}"><svg class="svg-icon">
                 <use xlink:href="{{site.baseurl}}/assets/minima-social-icons.svg#instagram"></use>
-              </svg> <span class="username">lappisunb</span></a></li>
-          <li><a href="https://www.twitter.com/lappisunb"><svg class="svg-icon">
-                <use xlink:href="{{site.baseurl}}/assets/minima-social-icons.svg#twitter"></use>
-              </svg> <span class="username">lappisunb</span></a></li>
+              </svg> <span class="username">{{site.instagram_username}}</span></a></li>
         </ul>
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in
-          your document head meta (for Google search results) and in your feed.xml site description.</p>
+        <p>{{site.description}}</p>
       </div>
     </div>
 

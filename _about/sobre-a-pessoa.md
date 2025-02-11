@@ -1,4 +1,4 @@
 ---
-citation: aksjdhaksjdhakjshd kajshdka aksjdhaks dkjabs kd 
+citation: Leo's
 ---
-Saskjdkashjdkajsh ashkdaksj askhgdvakjbs dkahs d akhs djahs dljha sljdh alsj dakhgs d,ba smdhga s,nb askhgd a,snbd akgsh d,anbs d,habs dgashhjdgkjashbdj,habsd jas dkhgas kdhgas 
+Eu sou o Leonardo Gomes, sou um viajante nesse mundo a procura de **perguntas** para esse mundo cheio de respostas. Que aqui se estabeleça minha inseguranças, vivências e erros. Que aqui eu possa poetizar, roteirizar e julgar com o coração aberto.
