@@ -1,0 +1,99 @@
+<div id="profissional">
+    <div id="title-container-profissional" class="title-projetos-profissional">
+        <h1 id="title-profissional">Experiência</h1>
+    </div>
+    <div class="title-mobile-profissional">
+        <h1>Experiência</h1>
+    </div>
+    <div class="wrapper-profissional">
+        <div class="content-profissional">
+            <div class="box-content">
+                <h1 id="title-profissional">Profissional</h1>
+                {% for experiences in site.profissional-experience %}
+                    <div class="wrapper-experience">
+                        <div class="box-title">
+                            <h3>{{ experiences.nome_empresa }}</h3>
+                            <div class="box-detail">
+                                <p>{{ experiences.period }}</p>
+                            </div>
+                        </div>
+                        <p>{{ experiences.description }}</p>
+                        <div class="profissional-details">
+                        {% for activity in experiences.activities %}
+                            <div>
+                                <h4>{{ activity.nome }}</h4>
+                                <p>{{ activity.position }}</p>
+                                <p>{{ activity.period }}</p>
+                                <p>{{ activity.link }}</p>
+                                <p><b>{{ activity.description }}</b></p>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="content-profissional">
+            <div class="box-content">
+                <h1 id="title-profissional">Projetos</h1>
+                {% for experiences in site.project-experience %}
+                    <div class="wrapper-experience">
+                        <div class="box-title">
+                            <h3>{{ experiences.nome }}</h3>
+                            <div class="box-detail">
+                                <p>{{ experiences.period }}</p>
+                                <p>{{ experiences.position }}</p>
+                                <p>{{ experiences.link }}</p>
+                            </div>
+                        </div>
+                        <p>{{ experiences.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="content-profissional">
+            <div class="box-content">
+                <h1 id="title-profissional">Voluntariado</h1>
+                {% for experiences in site.volunteer-experience %}
+                    <div class="wrapper-experience">
+                        <div class="box-title">
+                            <h3>{{ experiences.nome }}</h3>
+                            <div class="box-detail">
+                                <p>{{ experiences.period }}</p>
+                                <p>{{ experiences.position }}</p>
+                            </div>
+                        </div>
+                        <p>{{ experiences.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const titleContainerProfissional = document.getElementById("title-container-profissional");
+    const titleProfissional = document.getElementById("title-profissional");
+
+    document.addEventListener("scroll", function () {
+        const headerHeight = 55
+        const titleHeightProfissional = 288
+        const titleTopProfissional = titleContainerProfissional.offsetTop - headerHeight
+        const titleBottomProfissional = titleContainerProfissional.offsetHeight + titleTopProfissional - titleHeightProfissional
+        if (window.pageYOffset > titleTopProfissional) {
+            if (window.pageYOffset < titleBottomProfissional) {
+                titleProfissional.style.position = "fixed";
+                titleProfissional.style.top = "55px";
+                titleContainerProfissional.style.alignItems = "normal"
+            } else {
+                titleProfissional.style.position = "absolute"
+                titleProfissional.style.top = "auto";
+                titleContainerProfissional.style.alignItems = "end"
+            }
+        } else {
+            titleProfissional.style.position = "relative"
+            titleProfissional.style.top = "auto";
+            titleContainerWhat.style.alignItems = "normal"
+        }
+    });
+</script>

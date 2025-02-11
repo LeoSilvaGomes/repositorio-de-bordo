@@ -1,0 +1,154 @@
+.about {
+    display: flex;
+    color: #000;
+
+    @media only screen and (max-width: 770px) {
+        display: block;
+    }
+}
+
+.title-about {
+    background-color: #262626;
+
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    width: 100px;
+    
+    h1 {
+        margin: 0px;
+        padding: 40px 0px;
+        font-size: 40px;
+        writing-mode: vertical-lr;
+        white-space: nowrap;
+    }
+    
+    @media only screen and (max-width: 770px) {
+        display: none;
+    }
+}
+
+.title-mobile-about {
+    display: none;
+    
+    background-color: #262626;
+    color: white;
+    
+    padding: 10px 30px;
+
+    h1 {
+        margin-bottom: 0px;
+    }
+
+    @media only screen and (max-width: 770px) {
+        display: block;
+    }
+}
+
+svg {
+    height: 150px;
+    width: 150px;
+    fill: currentColor;
+    transform-origin: center;
+}
+
+.about-wrapper {
+    width: fit-content;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content {
+    margin: 30px 50px;
+
+    @media only screen and (max-width: 770px) {
+        margin: 30px;
+    }
+}
+
+.about-title-content {
+    display: flex;
+    align-items: center;
+
+    .about-title {
+        width: -webkit-fill-available;
+
+        p {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+
+            font-size: 25px;
+            font-weight: bold;
+
+            @media only screen and (max-width: 770px) {
+                font-size: 20px;
+            }
+        }
+
+        a {
+            margin-left: 15px;
+
+            font-size: 20px;
+            color: black;
+
+            &:hover {
+                color: gray;
+            }
+        }
+    }
+}
+
+.about-description {
+    margin-top: 25px;
+
+    p {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    a {
+        color: #262626;
+        text-decoration: underline;
+    }
+
+    .keywords {
+        margin-bottom: 0px;
+    }
+}
+
+.habilities-content {
+    background-color: #eccd00;
+    padding: 30px 50px;
+
+    @media only screen and (max-width: 770px) {
+        padding: 30px;
+    }
+}
+
+.habilities-description {
+    width: 100%;
+    margin-top: 15px;
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr;
+}
+
+.hability {
+    p {
+        font-weight: 300;
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+
+    ul {
+        margin-left: 20px;
+    }
+
+    li {
+        font-size: 12px;
+    }
+}

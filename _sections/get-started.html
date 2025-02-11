@@ -1,0 +1,146 @@
+<div id="get-started" class="get-started">
+    <div id="title-container" class="title-started">
+        <h1 id="title" >Get Started</h1>
+    </div>
+    <div class="title-mobile-started">
+        <h1>Get Started</h1>
+    </div>
+    <div class="started-wrapper">
+        <div class="started-content">
+            <div class="started-title-content">
+                <div class="icon-box">
+                    <i class="fab fa-telegram fa-1x"></i>
+                </div>
+                <div class="started-title">
+                    <p>
+                        Join in our Community Channel
+                    </p>
+                </div>
+            </div>
+            <div class="started-description">
+                <p>Join the Decidim community on <b>Telegram</b> and connect with other developers, mentors, and organizers. Our Telegram server is a great place to ask questions, share ideas, and get support throughout about Decidim.</p>
+                <a href="https://t.me/gsoclappis">Join Telegram</a>
+            </div>
+        </div>
+        <div class="started-content">
+            <div class="started-title-content">
+                <div class="icon-box">
+                    <i class="fas fa-code-branch fa-1x"></i>
+                </div>
+                <div class="started-title">
+                    <p>
+                        Start Contribuiting
+                    </p>
+                </div>
+            </div>
+            <div class="started-description">
+                <p>Contribute to the project and make your mark on open-source development with LAPPIS. By making a Pull Request (PR) to one of our existing projects, you'll have the opportunity to showcase your skills and demonstrate your understanding of the project. This will also give you an opportunity to work with the mentors and get familiar with the project before the official GSoC coding period starts. This is a great way to get started and increase your chances of being selected for the program.</p>
+                <a href="https://gitlab.com/lappis-unb/decidimbr/decidim-govbr/-/wikis/en/_onboarding-decidim-govbr">Onboarding</a>
+            </div>
+        </div>
+        <div class="started-content">
+            <div class="started-title-content">
+                <div class="icon-box">
+                    <i class="fas fa-calendar fa-1x"></i>
+                </div>
+                <div class="started-title">
+                    <p>
+                        Write a Draft Application
+                    </p>
+                </div>
+            </div>
+            <div class="started-description">
+                <p>Select an Idea and write a draft application that expands this ideas with your own proposals and showcases how you will execute and complete your project . This is your chance to demonstrate your understanding of the project, your skills, and your passion for open-source development. Our mentors will provide feedback and help you refine your proposal, increasing your chances of being selected for the program.</p>
+                <a href="#ideias">Ideias</a>
+            </div>
+        </div>
+        <div class="started-content">
+            <div class="started-title-content">
+                <div class="icon-box">
+                    <i class="fas fa-user fa-1x"></i>
+                </div>
+                <div class="started-title">
+                    <p>
+                        Discuss with Mentors
+                    </p>
+                </div>
+            </div>
+            <div class="started-description">
+                By having a discussion with our mentors, you'll have the opportunity to ask questions, get feedback, and fine-tune your proposal. This will ensure that your proposal is well-aligned with the project goals and that you fully understand the expectations for the project. Our mentors will provide guidance and support to help you craft the best possible proposal, increasing your chances of being selected for the program.
+            </div>
+        </div>
+        <div class="started-content">
+            <div class="started-title-content">
+                <div class="icon-box">
+                    <i class="fas fa-calendar fa-1x"></i>
+                </div>
+                <div class="started-title">
+                    <p>
+                        Submit Final Application
+                    </p>
+                </div>
+            </div>
+            <div class="started-description-last">
+                By submitting your final application for GSoC, you'll be taking the last step in your journey to becoming a part of our community and contributing to projects that are shaping the future of technology. Make sure to submit your application before the deadline and include all the details correctly that are asked by Google. Wait for the selection process to take place and cross your fingers!
+            </div>
+        </div>
+        <div class="get-started-video">
+            <div class="get-started-video-content">
+                <div class="get-started-video-text">
+                    <h1>How to start?</h1>
+                    <p>
+                        Here, Ludimila brings us an introductory video about Google Summer of Code (GSoC) 2024, where she explain how you can become a contributor to our projects and join our community!
+                    </p>
+                </div>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MNk3EcHmzR4?si=wRCw_FE5crSUNdPd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="see-our-org">
+            <div class="apresent-title">
+                <div class="bounce">
+                    <!-- <img class="image-about" src="{{ site.baseurl }}/files/gsoc.png" /> -->
+                </div>
+                <div class="bounceInvert">
+                    <!-- <img class="image-about" src="{{ site.baseurl }}/files/logo6.png" /> -->
+                </div>
+                <h1>GOOGLE SUMMER OF CODE</h1>
+            </div>
+            <div class="button-see-org">
+                <a href="https://summerofcode.withgoogle.com/programs/2024/organizations/lappis">View 2024 Program Announcements</a>
+                <a href="https://developers.google.com/open-source/gsoc/timeline">View 2024 Program Timeline</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const titleContainer = document.getElementById("title-container");
+    const title = document.getElementById("title");
+    const headerStarted = document.getElementById("header");
+
+    document.addEventListener("scroll", function() {
+        const headerHeight = 55
+        const titleHeight = 286
+        const titleTop = titleContainer.offsetTop - headerHeight
+        const titleBottom = titleContainer.offsetHeight + titleTop - titleHeight
+        if (window.pageYOffset > titleTop) {
+            if (window.pageYOffset < titleBottom) {
+                title.style.position = "fixed";
+                title.style.top = "55px";
+                titleContainer.style.alignItems = "normal"
+                headerStarted.style.backgroundColor = "#DC7004"
+            } else {
+                title.style.position = "absolute"
+                title.style.top = "auto";
+                titleContainer.style.alignItems = "end"
+            }
+        } else {
+            title.style.position = "relative"
+            title.style.top = "auto";
+            titleContainer.style.alignItems = "normal"
+            headerStarted.style.backgroundColor = "#262626"
+        }
+    });
+</script>

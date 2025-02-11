@@ -1,0 +1,34 @@
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/curriculum-project" # the subpath of your site, e.g. /blog
+url: "https://curriculum-project.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: lappisunb
+github_username: lappis-unb
+facebook_username: lappisunb5
+instagram_username: lappisunb
+medium_username: lappisunbfga
+
+collections:
+  sections:
+    output: true
+  profissional-experience:
+    output: true
+  about:
+    output: true
+  habilities:
+    output: true
+  qualification:
+    output: true
+  project-experience:
+    output: true
+  volunteer-experience:
+    output: true
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed

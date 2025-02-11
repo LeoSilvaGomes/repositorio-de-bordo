@@ -1,0 +1,30 @@
+{{ project.content | markdownify }}
+
+
+<!-- {% if project.repo %}
+    <a href="{{project.repo}}">GitHub</a>
+{% endif %} -->
+
+{% if project.complexity %}
+    <p class="keywords">
+        <b>Project Complexity: </b>{{project.complexity}}
+    </p>
+{% endif %}
+
+{% if project.size %}
+    <p class="keywords">
+        <b>Expected size of the project: </b>{{project.size}}
+    </p>
+{% endif %}
+
+{% if project.skill %}
+    <p class="keywords">
+        <b>Skills required/preferred: </b>{{project.skill}}
+    </p>
+{% endif %}
+
+{% if project.deliverables %}
+    <p class="keywords">
+        <b>Deliverables: </b>{{project.deliverables}}
+    </p>
+{% endif %}

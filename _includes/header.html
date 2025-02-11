@@ -1,0 +1,38 @@
+<header class="site-header" id="header">
+  <div class="wrapper">
+    <div class="header-content">
+      <!-- <div data-aos="fade-right" data-aos-anchor="#trigger-left" data-aos-anchor-placement="top-top">
+        <a class="site-title" rel="author" href="/">
+          <p>{{site.title}}</p>
+        </a>
+      </div> -->
+      <a class="site-title" rel="author" href="{{ site.baseurl }}/">
+        <p>{{site.title}}</p>
+      </a>
+
+      <nav class="site-nav">
+        <div class="icontop">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <div id="hideicon">
+          <a href="{{ site.baseurl }}/#about" class='page-link'>Resumo</a>
+          <a href="{{ site.baseurl }}/#profissional" class='page-link'>Experiência</a>
+          <a class="page-link" href="{{ site.baseurl }}/blog">Blog</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("hideicon");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>

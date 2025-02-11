@@ -1,0 +1,84 @@
+#profissional{
+    display: flex;
+    background-color: #262626;
+
+    @media only screen and (max-width: 770px) {
+        display: block;
+    }
+
+    .title-mobile-profissional {
+        display: none;
+        
+        background-color: white;
+        color: #262626;
+        
+        padding: 10px 30px;
+    
+        h1 {
+            margin-bottom: 0px;
+        }
+    
+        @media only screen and (max-width: 770px) {
+            display: block;
+        }
+    }
+
+    .title-projetos-profissional {
+        background-color: white;
+    
+        display: flex;
+        justify-content: center;
+    
+        color: #262626;
+        width: 100px;
+    
+        
+        h1 {
+            margin: 0px;
+            padding: 40px 0px;
+            font-size: 40px;
+            writing-mode: vertical-lr;
+            white-space: nowrap;
+        }
+        
+        @media only screen and (max-width: 770px) {
+            display: none;
+        }
+    }
+
+    .content-profissional {
+        width: 100%;
+        padding-bottom: 40px;
+
+        @media only screen and (max-width: 770px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}
+
+.profissional-details {
+    width: fit-content;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    h4 {
+        margin: 0px;
+        margin-top: 12px;
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px !important;
+        font-weight: 300;
+        line-height: 16px;
+    }
+}
+
+.wrapper-experience {
+    padding-bottom: 25px;
+}

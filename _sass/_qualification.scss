@@ -1,0 +1,145 @@
+.box-content {
+    margin: 40px 50px 0px 50px;
+
+    @media only screen and (max-width: 770px) {
+        margin: 30px;
+        margin-bottom: 0px;
+        padding-left: 12px;
+        border-left: 1px solid;
+    }
+
+    .box-title{ 
+        margin-bottom: 2px;
+
+        h3 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        p {
+            line-height: normal;
+            font-weight: 300;
+            font-size: 12px;
+        }
+    }
+
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+.box-certificate {
+    margin-top: 16px;
+}
+
+.certificate {
+
+    padding: 8px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    &:visited {
+        color: #eccd00;
+        border-color: #eccd00;
+    }
+
+    &:hover {
+        color: #828282;
+        border-color: #828282;
+    }
+}
+
+.participe {
+    height: 130px;
+    background-color: #DC7004;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    margin-top: 40px;
+
+    .participe-title {
+        padding-bottom: 10px;
+    }
+
+    p {
+        margin: 0px 40px;
+    }
+}
+
+#qualification{
+    display: flex;
+    background-color: white;
+    color: #262626;
+
+    @media only screen and (max-width: 770px) {
+        display: block;
+    }
+
+    .title-mobile-qualification {
+        display: none;
+        
+        background-color: #eccd00;
+        color: #262626;
+        
+        padding: 10px 30px;
+    
+        h1 {
+            margin-bottom: 0px;
+        }
+    
+        @media only screen and (max-width: 770px) {
+            display: block;
+        }
+    }
+
+    .title-projetos-qualification {
+        background-color: #eccd00;
+    
+        display: flex;
+        justify-content: center;
+    
+        color: #262626;
+        width: 100px;
+    
+        
+        h1 {
+            margin: 0px;
+            padding: 40px 0px;
+            font-size: 40px;
+            writing-mode: vertical-lr;
+            white-space: nowrap;
+        }
+        
+        @media only screen and (max-width: 770px) {
+            display: none;
+        }
+    }
+
+    .content-qualification {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 40px;
+
+        @media only screen and (max-width: 770px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}
