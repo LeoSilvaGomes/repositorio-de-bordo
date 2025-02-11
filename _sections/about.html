@@ -20,43 +20,6 @@
                 </div>
             </div>
         {% endfor %}
-        <div class="habilities-content">
-            <div class="about-title-content">
-                <div class="about-title">
-                    <p>
-                        Habilidades
-                    </p>
-                </div>
-            </div>
-            <div class="habilities-description">
-                {% for hability in site.habilities %}
-                    <div class="hability">
-                        <p>Línguas estrangeiras</p>
-                        <ul>
-                            {% for lingua in hability.linguas %}
-                                <li>{{ lingua[0] }} : <b>{{lingua[1]}}</b></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="hability">
-                        <p>Tecnologias</p>
-                        <ul>
-                            {% for tecnologia in hability.tecnologias %}
-                                <li>{{ tecnologia }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="hability">
-                        <p>Ferramentas</p>
-                        <ul>
-                            {% for ferramenta in hability.ferramentas %}
-                                <li>{{ ferramenta }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
     </div>
 </div>
 
