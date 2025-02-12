@@ -48,12 +48,8 @@ $on-laptop:        1020px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-//         "layout",
         "profissional",
         "header",
         "about",
         "qualification"
-//         "get-started",
-//         "what-is-it",
-//         "syntax-highlighting"
 ;

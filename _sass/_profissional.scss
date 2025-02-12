@@ -59,24 +59,25 @@
 }
 
 .profissional-details {
-    width: fit-content;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 40px;
-
     h4 {
         margin: 0px;
         margin-top: 12px;
         font-size: 18px;
     }
 
-    p {
-        font-size: 12px !important;
-        font-weight: 300;
-        line-height: 16px;
-    }
+}
+
+.description-details-profissional {
+    font-size: 12px !important;
+    font-weight: 300;
+    line-height: 16px;
+    padding-top: 5px;
+}
+
+.subtitle-details-profissional {
+    font-weight: 100 !important;
+    font-size: 11px !important;
+    line-height: 14px;
 }
 
 .wrapper-profissional {
@@ -88,5 +89,18 @@
 }
 
 .wrapper-experience {
-    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+// PROJETOS
+
+.grid-content {
+    display: grid;
+    gap: 0px 30px;
+    grid-template-columns: 1fr 1fr;
+    
+    
+    @media only screen and (max-width: 770px) {
+        grid-template-columns: 1fr;
+    }
 }
