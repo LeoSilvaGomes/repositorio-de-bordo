@@ -1,6 +1,6 @@
 ---
 name: Curriculo - Experiência Profissional
-about: "....s"
+about: ""
 title: ''
 labels: experiencia_profissional
 assignees: ''
