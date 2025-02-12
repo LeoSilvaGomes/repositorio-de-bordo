@@ -258,9 +258,7 @@ table td {
   * Site header
   */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 55.95px;
+  min-height: 62px;
   position: relative;
 }
 
@@ -302,61 +300,6 @@ table td {
 
 .site-nav .page-link:not(:last-child) {
   margin-right: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  .site-nav {
-    position: absolute;
-    top: 9px;
-    right: 15px;
-    background-color: #fdfdfd;
-    border: 1px solid #e8e8e8;
-    border-radius: 5px;
-    text-align: right;
-  }
-
-  .site-nav label[for="nav-trigger"] {
-    display: block;
-    float: right;
-    width: 36px;
-    height: 36px;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  .site-nav .menu-icon {
-    display: block;
-    float: right;
-    width: 36px;
-    height: 26px;
-    line-height: 0;
-    padding-top: 10px;
-    text-align: center;
-  }
-
-  .site-nav .menu-icon>svg {
-    fill: #424242;
-  }
-
-  .site-nav input~.trigger {
-    clear: both;
-    display: none;
-  }
-
-  .site-nav input:checked~.trigger {
-    display: block;
-    padding-bottom: 5px;
-  }
-
-  .site-nav .page-link {
-    display: block;
-    margin-left: 20px;
-    padding: 5px 10px;
-  }
-
-  .site-nav .page-link:not(:last-child) {
-    margin-right: 0;
-  }
 }
 
 /**
