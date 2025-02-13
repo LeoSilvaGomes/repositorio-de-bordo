@@ -179,6 +179,10 @@ pre>code {
 /**
   * Wrapper
   */
+
+.home {
+  margin-top: 25px;
+}  
 .wrapper {
   max-width: -webkit-calc(800px - (30px * 2));
   max-width: calc(800px - (30px * 2));
@@ -378,11 +382,15 @@ table td {
 }
 
 .page-heading {
-  font-size: 32px;
+  display: none;
 }
 
 .post-list-heading {
-  font-size: 28px;
+  display: none;
+}
+
+.rss-subscribe {
+  display: none;
 }
 
 .post-list {
