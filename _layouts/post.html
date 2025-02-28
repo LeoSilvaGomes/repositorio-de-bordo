@@ -14,10 +14,10 @@ layout: default
 	{% endif %}
 
 
-	{% if page.tags %}
-		• {% for tag in page.tags %}
-        		<a href="{{site.baseurl}}/archive.html#{{tag | slugize}}">
-            			#{{ tag }} 
+	{% if page.categories %}
+		• {% for category in page.categories %}
+        		<a href="{{site.baseurl}}/{{category | slugize}}">
+            			#{{ category }} 
         		</a>
     		{% endfor %}
 	{% endif %}
