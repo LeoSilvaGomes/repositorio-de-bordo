@@ -1,11 +1,11 @@
-name: Create Markdown
+name: Edit Markdown
 
 on:
   issues:
-    types: [opened]
+    types: [edited]
 
 jobs:
-  create-file:
+  edit-file:
     if: github.event.label.name
     runs-on: ubuntu-latest
 
@@ -30,14 +30,7 @@ jobs:
         if: github.event.label.name == 'post'
         run: |
           chmod +x ./scripts/create_post.sh
-          ./scripts/create_post.sh
-        shell: bash
-
-      - name: Create issue as Markdown file for Qualification
-        if: github.event.label.name == 'qualification'
-        run: |
-          chmod +x ./scripts/create_qualification.sh
-          ./scripts/create_qualification.sh
+          ./scripts/edit/post.sh
         shell: bash
 
       - name: Commit and Push changes
