@@ -22,6 +22,8 @@ collections:
     output: true
   volunteer-experience:
     output: true
+  habilities:
+    output: false
 
 # Build settings
 theme: minima

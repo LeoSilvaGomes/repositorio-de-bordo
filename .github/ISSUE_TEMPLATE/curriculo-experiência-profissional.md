@@ -1,12 +1,23 @@
 ---
 name: Curriculo - Experiência Profissional
-about: "..."
+about: "---"
 title: ''
 labels: experiencia_profissional
 assignees: ''
 
 ---
 
-nome_empresa:
-cargo:
-periodo:
+position:
+period:
+local:
+description:
+
+activities:
+     - nome:
+       position:
+       description:
+       period:
+     - nome:
+       position:
+       description:
+       period:
