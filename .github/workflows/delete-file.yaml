@@ -2,7 +2,7 @@ name: Delete Markdown
 
 on:
   issues:
-    types: [deleted]
+    types: [deleted, unlabeled]
 
 jobs:
   delete-file:
