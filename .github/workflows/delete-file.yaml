@@ -1,0 +1,39 @@
+name: Delete Markdown
+
+on:
+  issues:
+    types: [deleted]
+
+jobs:
+  delete-file:
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_ISSUE_NUMBER: ${{ github.event.issue.number }}
+      GITHUB_ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
+      GITHUB_ISSUE_BODY: ${{ github.event.issue.body }}
+      GITHUB_ISSUE_TITLE: ${{ github.event.issue.title }}
+      GITHUB_ISSUE_USER: ${{ github.event.issue.user.login }}
+      GITHUB_ISSUE_URL: ${{ github.event.issue.html_url }}
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Delete Markdown file
+        run: |
+          chmod +x ./scripts/delete_file.sh
+          ./scripts/delete_file.sh
+        shell: bash
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Create post ${{ github.event.issue.name }}"
+          branch: main
+

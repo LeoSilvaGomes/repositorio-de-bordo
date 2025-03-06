@@ -26,11 +26,59 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Delete Markdown file
+        run: |
+          chmod +x ./scripts/delete_file.sh
+          ./scripts/delete_file.sh
+        shell: bash
+
       - name: Create issue as Markdown file for Post
         if: github.event.label.name == 'post'
         run: |
           chmod +x ./scripts/create_post.sh
-          ./scripts/edit/post.sh
+          ./scripts/create_post.sh
+        shell: bash
+      
+      - name: Create issue as Markdown file for Profissional Experience
+        if: github.event.label.name == 'experiencia_profissional'
+        run: |
+          chmod +x ./scripts/create_experiencia_profissional.sh
+          ./scripts/create_experiencia_profissional.sh
+        shell: bash
+
+      - name: Create issue as Markdown file for Volunteer Experience
+        if: github.event.label.name == 'experiencia_voluntaria'
+        run: |
+          chmod +x ./scripts/create_experiencia_volunteer.sh
+          ./scripts/create_experiencia_volunteer.sh
+        shell: bash
+
+      - name: Create issue as Markdown file for Project Experience
+        if: github.event.label.name == 'experiencia_em_projeto'
+        run: |
+          chmod +x ./scripts/create_experiencia_project.sh
+          ./scripts/create_experiencia_project.sh
+        shell: bash
+
+      - name: Create issue as Markdown file for Profissional Experience
+        if: github.event.label.name == 'experiencia_profissional'
+        run: |
+          chmod +x ./scripts/create_experiencia_profissional.sh
+          ./scripts/create_experiencia_profissional.sh
+        shell: bash
+
+      - name: Create issue as Markdown file for Volunteer Experience
+        if: github.event.label.name == 'experiencia_voluntaria'
+        run: |
+          chmod +x ./scripts/create_experiencia_volunteer.sh
+          ./scripts/create_experiencia_volunteer.sh
+        shell: bash
+
+      - name: Create issue as Markdown file for Project Experience
+        if: github.event.label.name == 'experiencia_em_projeto'
+        run: |
+          chmod +x ./scripts/create_experiencia_project.sh
+          ./scripts/create_experiencia_project.sh
         shell: bash
 
       - name: Commit and Push changes
