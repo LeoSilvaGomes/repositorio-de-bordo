@@ -1,5 +1,5 @@
 ---
-name: Curriculo - Projetos
+name: Curriculo - Voluntariado
 about: "---"
 title: ''
 labels: experiencia_voluntaria
