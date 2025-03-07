@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="home">
+  <h4 class="filter-title">Filtros</h4>
+  <ul class="category-list">
+    {% for category in site.categories %}
+      <li><a class="category" name="{{ category | first }}" href="{{site.baseurl}}/category/{{ category | first }}">{{ category | first }}</a></li>
+      <span>•</span>
+    {% endfor %}
+  </ul>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
+        {% if post.categories %}
+        • {% for category in post.categories %}
+        <a class="post-category" href="{{site.baseurl}}/category/{{category | slugize}}">{{ category }}</a>
+        {% endfor %}
+        {% endif %}
+      </span>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

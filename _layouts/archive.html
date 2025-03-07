@@ -1,0 +1,29 @@
+---
+layout: default
+title: Categoria
+---
+<div class="home">
+  <h4 class="filter-title">Filtro Selecionado</h4>
+  <ul class="category-list">
+      <li><a class="category" name="{{ category | first }}" href="{{site.baseurl}}/blog">{{ page.title }}</a></li>
+  </ul>
+
+  <ul class="post-list">
+    {% for post in page.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
+          {% if post.categories %}
+            • {% for category in post.categories %}
+                  {% if category == page.title %}
+                    <a class="post-category-selected" href="{{site.baseurl}}/blog">{{ category }}</a>
+                  {% else %}
+                    <a class="post-category" href="{{site.baseurl}}/category/{{category | slugize}}">{{ category }}</a>
+                  {% endif %}
+                {% endfor %}
+          {% endif %}
+        </span>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

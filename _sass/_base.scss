@@ -393,13 +393,32 @@ table td {
   display: none;
 }
 
+.category-list {
+  display: flex;
+  margin-left: 0;
+  margin-bottom: 25px;
+  list-style: none;
+  border-bottom: 1px solid #828282;
+}
+
+.category {
+  font-size: 12px;
+  color: #1756a9;
+  cursor: pointer;
+}
+
+.filter-title {
+  color: black;
+  margin: 0;
+}
+
 .post-list {
   margin-left: 0;
   list-style: none;
 }
 
 .post-list>li {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .post-meta {
@@ -410,6 +429,23 @@ table td {
 .post-link {
   display: block;
   font-size: 24px;
+}
+
+.post-category {
+  padding: 3px 5px;
+  margin-right: 3px;
+  border: 1px solid #1756a9;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.post-category-selected {
+  padding: 3px 5px;
+  margin-right: 3px;
+  color: #eccd00 !important;
+  border: 1px solid #eccd00;
+  border-radius: 6px;
+  font-size: 12px;
 }
 
 /**

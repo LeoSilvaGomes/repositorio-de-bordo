@@ -16,7 +16,7 @@ layout: default
 
 	{% if page.categories %}
 		• {% for category in page.categories %}
-        		<a href="{{site.baseurl}}/{{category | slugize}}">
+        		<a href="{{site.baseurl}}/category/{{category | slugize}}">
             			#{{ category }} 
         		</a>
     		{% endfor %}
