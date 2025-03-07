@@ -6,10 +6,10 @@ gem "kramdown-parser-gfm"
 gem "minima", "~> 2.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll-archives'
 end
 
 gem "webrick", "~> 1.8"
 
 gem "faraday-retry", "~> 2.2"
 gem 'jekyll-sass-converter', "1.5.2"
-gem 'jekyll-archives'
