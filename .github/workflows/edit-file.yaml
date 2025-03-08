@@ -6,7 +6,7 @@ on:
 
 jobs:
   edit-file:
-    if: github.event.label.name
+    if: github.event.label
     runs-on: ubuntu-latest
 
     env:
