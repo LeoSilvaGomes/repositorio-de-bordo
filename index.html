@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+  <title>
+    Curriculo
+  </title>
+  <meta name="generator" content="Jekyll v3.9.5" />
+  <meta property="og:title" content="Blog" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <meta property="og:description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/" />
+  <link rel="alternate" type="application/rss+xml" title="Repositório de Bordo" href="https://leosilvagomes.github.io/repositorio-de-bordo /feed.xml">
+  <link rel="stylesheet" href="/repositorio-de-bordo/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+</head>
+
+  <body>
+
+    <header class="site-header" id="header">
+  <div class="wrapper">
+    <div class="header-content">
+      <a class="site-title" rel="author" href="/repositorio-de-bordo/">
+        <h4>Repositório de Bordo</h4>
+      </a>
+
+      <nav class="site-nav">
+        <div class="icontop">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <div id="hideicon">
+          <a href="/repositorio-de-bordo/#about" class='page-link'>Resumo</a>
+          <a href="/repositorio-de-bordo/#profissional" class='page-link'>Experiência</a>
+          <a href="/repositorio-de-bordo/#qualification" class='page-link'>Certificados</a>
+          <a class="page-link" href="/repositorio-de-bordo/blog">Blog</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("hideicon");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
+
+    <div class="page-content">
+      <div id="about" class="about">
+    <div id="title-container-about" class="title-about title-vertical">
+        <h2 id="title-about" >Resumo</h2>
+    </div>
+    <div class="title-mobile-about title-mobile">
+        <h2>Resumo</h2>
+    </div>
+    <div class="about-wrapper">
+        
+            <div class="about-content">
+                <div class="about-title-content">
+                    <div class="about-title">
+                        <p>
+                            Leo's
+                        </p>
+                    </div>
+                </div>
+                <div class="about-description">
+                    <p><p>Eu sou o Leonardo Gomes, sou um viajante nesse mundo a procura de <strong>perguntas</strong> para esse mundo cheio de respostas. Que aqui se estabeleça minhas inseguranças, vivências e erros. Que aqui eu possa poetizar, roteirizar e julgar com o coração aberto.</p>
+</p>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<script>
+    const titleContainerAbout = document.getElementById("title-container-about");
+    const titleAbout = document.getElementById("title-about");
+    const headerAbout = document.getElementById("header");
+
+    document.addEventListener("scroll", function() {
+        const headerHeight = 60
+        const titleHeightAbout = 228
+        const titleTopAbout = titleContainerAbout.offsetTop - headerHeight
+        const titleBottomAbout = titleContainerAbout.offsetHeight + titleTopAbout - titleHeightAbout
+        if (window.pageYOffset > titleTopAbout) {
+            if (window.pageYOffset < titleBottomAbout) {
+                titleAbout.style.position = "fixed";
+                titleAbout.style.top = "55px";
+                titleContainerAbout.style.alignItems = "normal"
+                headerAbout.style.backgroundColor = "#262626"
+            } else {
+                titleAbout.style.position = "absolute"
+                titleAbout.style.top = "auto";
+                titleContainerAbout.style.alignItems = "end"
+            }
+        } else {
+            titleAbout.style.position = "relative"
+            titleAbout.style.top = "auto";
+            titleContainerAbout.style.alignItems = "normal"
+        }
+    });
+</script>
+<div id="profissional">
+    <div id="title-container-profissional" class="title-projetos-profissional  title-vertical">
+        <h2 id="title-profissional">Experiência</h2>
+    </div>
+    <div class="title-mobile-profissional title-mobile">
+        <h2>Experiência</h2>
+    </div>
+    <div class="wrapper-profissional">
+        <div class="content-profissional">
+            <div class="box-content">
+                <h3 id="title-profissional">Profissional</h3>
+                
+                    <div class="wrapper-experience">
+                        <div class="box-title">
+                            <h4>Wellhub - Gympass</h4>
+                            <div class="box-detail">
+                                <h6>Dezembro 2021 - Maio 2023</h6>
+                            </div>
+                        </div>
+                        <p>O Wellhub é uma plataforma de bem-estar corporativo que oferece acesso a atividades físicas, terapia, nutrição, mindfulness e qualidade do sono. A plataforma foi anteriormente conhecida como Gympass.</p>
+                        <div class="profissional-details grid-content">
+                        
+                            <div>
+                                <h4>HR Portal</h4>
+                                <h6>Front-End Developer</h6>
+                                <h6>Dezembro 2021 - Maio 2023</h6>
+                                <p class="p2"></p>
+                                <p class="p2">O HR portal era a plataforma utilizada pelo pessoal de HR das empresas colaboradoras, nessa plataforma eu pude trabalhar no monitoramento da plataforma, utilizando o datadog como ferramenta; Participar do refinamento de várias features e todo o processo de desenvolvimento de software; As principais tecnologias que eu trabalhei foram React, CSS, HTML, Terraform.</p>
+                            </div>
+                        
+                            <div>
+                                <h4>Gympass Challenge Platform</h4>
+                                <h6>Front-End Developer</h6>
+                                <h6>Março 2022 - Outubro 2022</h6>
+                                <p class="p2"></p>
+                                <p class="p2">Plataforma interna do Gympass utilizada para um desafio de bem-estar que aconteceu no encontro dos colaboradores no ano de 2022.</p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                    <div class="wrapper-experience">
+                        <div class="box-title">
+                            <h4>Laboratório Avançado de Produção, Pesquisa e Inovação em Software (LAPPIS) - UnB</h4>
+                            <div class="box-detail">
+                                <h6>Julho 2018 - Atualmente</h6>
+                            </div>
+                        </div>
+                        <p>Laboratório de pesquisa em engenharia de software focado em pesquisa aplicada em DevOps e código aberto. O laboratório colaborou em inúmeros projetos de código aberto, como Rocket.Chat, Linux kernel, Debian, Noosfero, Rasa. Professores do LAPPIS incentivam alunos a contribuir ativamente para o comunidade de software livre e o uso de práticas ágeis.</p>
+                        <div class="profissional-details grid-content">
+                        
+                            <div>
+                                <h4>Brasil Participativo</h4>
+                                <h6>Gerente de Projeto</h6>
+                                <h6>Fevereiro 2023 - Dezembro 2024</h6>
+                                <p class="p2"></p>
+                                <p class="p2">A Plataforma Brasil Participativo é a plataforma de participação social do governo federal, construída para que a população possa contribuir com a criação e melhoria das políticas públicas. A plataforma foi desenvolvida em software livre com o apoio da Dataprev, da comunidade Decidim-Brasil, do Ministério da Gestão e da Inovação em Serviços Públicos (MGI) e da Universidade de Brasília (UnB).</p>
+                            </div>
+                        
+                            <div>
+                                <h4>Empurrando Juntos (EJ)</h4>
+                                <h6>Front End Developer</h6>
+                                <h6>Maio 2018 - Fevereiro 2019</h6>
+                                <p class="p2"></p>
+                                <p class="p2">Empurrando Juntos (EJ) é uma plataforma de pesquisa de opinião de código aberto em PWA desenvolvido em Django. No EJ, você pode criar conversas para obter ideias e opiniões sobre políticas públicas, serviços ou equipamentos, identificando as diferentes opiniões grupos na sociedade (bolhas de opinião).</p>
+                            </div>
+                        
+                            <div>
+                                <h4>TAIS</h4>
+                                <h6>Back-End Developer</h6>
+                                <h6>Abril 2019 - Outubro 2019</h6>
+                                <p class="p2"></p>
+                                <p class="p2">Tais é um chatbot desenvolvido pela LAPPIS, em parceria de dois anos com o Ministério da Cultura. Ele usa a estrutura de chatbot Rasa de código aberto, onde algoritmos de aprendizagem profunda executam ambos compreensão de linguagem natural e gestão de diálogo de contexto.</p>
+                            </div>
+                        
+                            <div>
+                                <h4>Hygia</h4>
+                                <h6>Back-End Developer</h6>
+                                <h6>Novembro 2021 - Janeiro 2023</h6>
+                                <p class="p2"></p>
+                                <p class="p2">Hygia é um pacote Python que fornece pipeline de dados rápido, flexível e expressivo para tornar o trabalho com dados de aprendizado de máquina fácil e intuitivo. A biblioteca foi projetada para facilitar o trabalho de desenvolvedores e cientistas de dados com uma ampla variedade de fontes de dados, realizar pré-processamento de dados, engenharia de recursos e treinar modelos com o mínimo de esforço.</p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                    <div class="wrapper-experience">
+                        <div class="box-title">
+                            <h4>Pencillabs</h4>
+                            <div class="box-detail">
+                                <h6>Março 2020 - Dezembro 2021</h6>
+                            </div>
+                        </div>
+                        <p>Empresa de tecnologia para instituições de impacto social. Mais do que códigos e soluções prontas, trabalhamos com nossos clientes para promover empoderamento tecnológico, gerando aprendizado, independência em seus processos e saltos estratégicos.</p>
+                        <div class="profissional-details grid-content">
+                        
+                            <div>
+                                <h4>NG credits</h4>
+                                <h6>Full-Stack Developer</h6>
+                                <h6>Maio 2020 - Maio 2021</h6>
+                                <p class="p2"></p>
+                                <p class="p2">NG credits é um empresa focada em refinanciamento de dívidas, na qual faz parceria com várias outras empresas para possibilitar a melhor maneira de conseguir ou reajustar um empréstimo e dívidas.</p>
+                            </div>
+                        
+                            <div>
+                                <h4>Infraestrutura da Pencil</h4>
+                                <h6>DevOps</h6>
+                                <h6>Outubro 2020 - Fevereiro 2021</h6>
+                                <p class="p2"></p>
+                                <p class="p2">A infraestrutura da Pencillabs era utilizada para testes de aplicações, armazenamento de dados e gerenciamento de serviços. A infra se baseia na utilização de códigos abertos e desenvolvimento do próprio ambiente para melhor controle.</p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="content-profissional project-section">
+            <div class="box-content">
+                <h3 id="title-profissional">Projetos</h3>
+                <div class="grid-content">
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>SEI</h4>
+                                <div class="box-detail">
+                                    <h6>Agosto 2020 - Dezembro 2020</h6>
+                                    <h6>Documentação, Prototipação</h6>
+                                    <h6></h6>
+                                </div>
+                            </div>
+                            <p>O Sistema Eletrônico de Informações (SEI) é um sistema de produção e gestão de documentos e processos eletrônicos desenvolvido pelo Tribunal Regional Federal da 4ª Região (TRF4) e cedido gratuitamente à administração pública.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Acacia</h4>
+                                <div class="box-detail">
+                                    <h6>Agosto 2019 - Dezembro 2019</h6>
+                                    <h6>Full-Stack Developer</h6>
+                                    <h6></h6>
+                                </div>
+                            </div>
+                            <p>Acacia é um site web mobile projetado para evitar o desperdício de alimentos, conectando proprietários de árvores a voluntários na colheita.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Info APS</h4>
+                                <div class="box-detail">
+                                    <h6>Agosto 2024 - Dezembro 2024</h6>
+                                    <h6>Front-End Developer, Designer</h6>
+                                    <h6></h6>
+                                </div>
+                            </div>
+                            <p>Informações de produção da atenção primária brasileira, utilizando os dados disponibilizados pelo governo brasileiro, no sistema de informação em saúde para a atenção básica (SISAB).</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>MiaAjuda</h4>
+                                <div class="box-detail">
+                                    <h6>Junho 2020 - Agosto 2020</h6>
+                                    <h6>Front-End Developer</h6>
+                                    <h6></h6>
+                                </div>
+                            </div>
+                            <p>Mia Ajuda é um projeto criado e desenvolvido por professores e estudantes da Faculdade do Gama (FGA), da Universidade de Brasília, com o intuito de contribuir com a sociedade em um momento de necessidade que estamos vivendo em relação à CoVid-19.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>PlantJammer</h4>
+                                <div class="box-detail">
+                                    <h6>Fevereiro 2021 - Maio 2021</h6>
+                                    <h6>Documentação</h6>
+                                    <h6></h6>
+                                </div>
+                            </div>
+                            <p>Plant Jammer é um aplicativo que visa ajudar entusiastas da culinária. A grande funcionalidade desse software é a capacidade de listar receitas de acordo com os alimentos que o usuário tem disponível em sua casa.</p>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content-profissional">
+            <div class="box-content">
+                <h3 id="title-profissional">Voluntariado</h3>
+                <div class="grid-content">
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Atlas - MIT | UFRGS</h4>
+                                <div class="box-detail">
+                                    <h6>2020 - 2022</h6>
+                                    <h6>Voluntário</h6>
+                                </div>
+                            </div>
+                            <p>O Atlas apresenta pesquisas recentes que revelam que entender os padrões de movimento da comunidade é crucial para entender o crescimento econômico e a mobilidade. Locais com padrões de movimento mais diversificados têm maior probabilidade de ter maior crescimento econômico no futuro próximo. O objetivo do Atlas é tornar esses insights mais acessíveis. A equipe utiliza análise de dados para produzir insights para pessoas, empresários e autoridades e ajudar a tomar decisões informadas.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Google Summer of Code - Mentor</h4>
+                                <div class="box-detail">
+                                    <h6>Agosto 2024 - Janeiro 2025</h6>
+                                    <h6>Voluntário</h6>
+                                </div>
+                            </div>
+                            <p>Fui mentor do progama da google, o GSOC. Pude orientar um aluno no projeto Brasil Participativo pelo LAPPIS.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Jandig - UnB</h4>
+                                <div class="box-detail">
+                                    <h6>2019</h6>
+                                    <h6>Colaborador</h6>
+                                </div>
+                            </div>
+                            <p>Jandig ARte é um software que usa detecção de padrão de imagem para detectar marcadores de realidade aumentada através da câmera de um dispositivo e renderizar um conteúdo (atualmente um GIF) na tela do dispositivo, dando a impressão de que seu dispositivo é como uma janela virtual que você está olhando.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Mentoria - UnB</h4>
+                                <div class="box-detail">
+                                    <h6>2021 - 2022</h6>
+                                    <h6>Voluntário</h6>
+                                </div>
+                            </div>
+                            <p>Fui mentor dos alunos na matéria Métodos de Desenvolvimento de Software (MDS), onde o principal objetivo da matéria é apresentar metodologias enquanto se desenvolve um projeto durante o semestre.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Mentoria - UnB</h4>
+                                <div class="box-detail">
+                                    <h6>Agosto 2019 - Dezembro 2019</h6>
+                                    <h6>Voluntário</h6>
+                                </div>
+                            </div>
+                            <p>Fui monitor da matéria Algoritmos de Programação para Computadores (APC), matéria introdutória no curso, na qual os alunos de Engenharia da Universidade de Brasília aprendem os conceitos básicos de programação em cima da linguagem C</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Mentoria - UnB</h4>
+                                <div class="box-detail">
+                                    <h6>Setembro 2022 - Janeiro 2023</h6>
+                                    <h6>Voluntário</h6>
+                                </div>
+                            </div>
+                            <p>Fui mentor dos alunos na matéria Gestão Configuração e Evolução de Software (GCES), onde o principal objetivo da matéria é apresentar os processos de configuração enquanto se desenvolve um projeto durante o semestre.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Orc’estra - UnB</h4>
+                                <div class="box-detail">
+                                    <h6>Maio 2018 - Setembro 2018</h6>
+                                    <h6>Voluntário</h6>
+                                </div>
+                            </div>
+                            <p>Orc'estra Gamification é a primeira empresa junior do Brasil, sendo formada e administrada por alunos de Engenharia de Software pela Universidade de Brasília.</p>
+                        </div>
+                    
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>Sinus - UnB</h4>
+                                <div class="box-detail">
+                                    <h6>2018 - 2019</h6>
+                                    <h6>Voluntário</h6>
+                                </div>
+                            </div>
+                            <p>Uma simulação que envolve alunos do ensino médio para discutir temas importantes para a sociedade e representar um país e sua política. Participei como diretor de Marketing.</p>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const titleContainerProfissional = document.getElementById("title-container-profissional");
+    const titleProfissional = document.getElementById("title-profissional");
+
+    document.addEventListener("scroll", function () {
+        const headerHeight = 55
+        const titleHeightProfissional = 331
+        const titleTopProfissional = titleContainerProfissional.offsetTop - headerHeight
+        const titleBottomProfissional = titleContainerProfissional.offsetHeight + titleTopProfissional - titleHeightProfissional
+        if (window.pageYOffset > titleTopProfissional) {
+            if (window.pageYOffset < titleBottomProfissional) {
+                titleProfissional.style.position = "fixed";
+                titleProfissional.style.top = "55px";
+                titleContainerProfissional.style.alignItems = "normal"
+            } else {
+                titleProfissional.style.position = "absolute"
+                titleProfissional.style.top = "auto";
+                titleContainerProfissional.style.alignItems = "end"
+            }
+        } else {
+            titleProfissional.style.position = "relative"
+            titleProfissional.style.top = "auto";
+            titleContainerWhat.style.alignItems = "normal"
+        }
+    });
+</script>
+<div id="qualification">
+    <div id="title-container-qualification" class="title-projetos-qualification title-vertical">
+        <h2 id="title-qualification">Certificados</h2>
+    </div>
+    <div class="title-mobile-qualification title-mobile">
+        <h2>Certificados</h2>
+    </div>
+    <div class="content-qualification">
+        <div class="box-content">
+            <div class="grid-content">
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Karatê</h4>
+                            <div class="box-detail">
+                                <h5>Academia Marques de Karatê-Do Uechi-Ryu Brasil</h5>
+                                <h6>Novembro 2005</h6>
+                            </div>
+                        </div>
+                        <p>Faixa azul clara de Karatê</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/f3b1d0fd-a028-44c2-aa03-19d780576a54" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>SINUS 2017</h4>
+                            <div class="box-detail">
+                                <h5>Universidade de Brasília</h5>
+                                <h6>Junho 2017</h6>
+                            </div>
+                        </div>
+                        <p>Delegado na Simulação das Nações Unidas para Secundaristas</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/96dfb7bd-c717-4a52-b009-995f86e3e974" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Curso de Inglês</h4>
+                            <div class="box-detail">
+                                <h5>Centro de Línguas de Ceilândia - CILC</h5>
+                                <h6>Setembro 2017</h6>
+                            </div>
+                        </div>
+                        <p>Curso de língua inglesa pela rede pública</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/896e0b55-14d5-488e-be71-d93dbc87b1b3" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Nivelamento em Matemática</h4>
+                            <div class="box-detail">
+                                <h5>Universidade de Brasília</h5>
+                                <h6>Fevereiro 2018</h6>
+                            </div>
+                        </div>
+                        <p>Nivelamento em matemática para o inicio da graduação em Engenharias</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/e6e642c1-ec62-49bd-8562-659a349ae4e7" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Laboratório Aberto</h4>
+                            <div class="box-detail">
+                                <h5>MediaLab - UnB</h5>
+                                <h6>Fevereiro 2019</h6>
+                            </div>
+                        </div>
+                        <p>Programa de férias feito pelo laboratório para incentivo a programação em FLOSS</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/files/18774616/MediaLab.pdf" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Javascript animation for websites, storytelling, data visualization and games</h4>
+                            <div class="box-detail">
+                                <h5>Online</h5>
+                                <h6>Outubro 2020</h6>
+                            </div>
+                        </div>
+                        <p>Curso fornecido pelo Coursera com foco em animações em javascript</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/files/18774638/js_animation.pdf" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Data Science do Zero</h4>
+                            <div class="box-detail">
+                                <h5>Online</h5>
+                                <h6>Abril 2020</h6>
+                            </div>
+                        </div>
+                        <p>Projeto de Data Science do Zero com Python, R e Javascript</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/files/18774643/python_dataScience.pdf" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Getting Started with Go</h4>
+                            <div class="box-detail">
+                                <h5>Online</h5>
+                                <h6>Outubro 2020</h6>
+                            </div>
+                        </div>
+                        <p>Curso de Go para iniciantes dado pela Universidade da California, Irvine pelo Coursera</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/files/18774650/Coursera.5Y9VV3VFLY3A.pdf" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Graduação em Engenharia de Software</h4>
+                            <div class="box-detail">
+                                <h5>Universidade de Brasília</h5>
+                                <h6>Março 2018 - Dezembro de 2023</h6>
+                            </div>
+                        </div>
+                        <p>Curso de Graduação em Engenharia de Software pela Universidade de Brasília</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/files/18774675/diploma.pdf" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Proerd</h4>
+                            <div class="box-detail">
+                                <h5>Polícia Militar - Distrito Federal</h5>
+                                <h6>Dezembro 2010</h6>
+                            </div>
+                        </div>
+                        <p>Programa Educacional de Resistência às Drogas</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/f9d89e1c-c116-4574-94ac-24f14ba7b636" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>OBMEP 2014</h4>
+                            <div class="box-detail">
+                                <h5>CEF 02 de Ceilândia</h5>
+                                <h6>Agosto 2015</h6>
+                            </div>
+                        </div>
+                        <p>Resultado Brilhante, Olimpíada Brasileira de Matemática das Escolas Públicas - OBMEP 2014</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/f73102e5-ddfa-458f-90e1-2b2f8044c3a2" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>OBMEP 2014</h4>
+                            <div class="box-detail">
+                                <h5>CEF 02 de Ceilândia</h5>
+                                <h6>Dezembro 2010</h6>
+                            </div>
+                        </div>
+                        <p>Menção Honrosa, 10ª Olimpíada Brasileira de Matemática das Escolas Públicas - OBMEP 2014</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/1d360232-9402-42c0-9d59-d69623d19018" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>Insignia de Mogli</h4>
+                            <div class="box-detail">
+                                <h5>Grupo Escoteiro Taguatinga</h5>
+                                <h6>Maio 2011</h6>
+                            </div>
+                        </div>
+                        <p>WFIS e AEBP confere o maior grau de distinto de um lobinho</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/a74711ee-e9e9-4f50-bff4-676319403af2" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>CEMMUN 2016</h4>
+                            <div class="box-detail">
+                                <h5>CEM 04 de Ceilândia</h5>
+                                <h6>Outubro 2016</h6>
+                            </div>
+                        </div>
+                        <p>Diretor de comunicação da Centro de Ensino Médio Model United Nations</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/e92579a7-5386-4abb-b2ea-7aff5bc1ae1c" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>SINUS 2016</h4>
+                            <div class="box-detail">
+                                <h5>Universidade de Brasília</h5>
+                                <h6>Abril 2016</h6>
+                            </div>
+                        </div>
+                        <p>Delegado na Simulação das Nações Unidas para Secundaristas</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/50b142ff-29d2-4956-a356-ce1236ab1eee" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>CEMMUN 2017</h4>
+                            <div class="box-detail">
+                                <h5>CEM 04 de Ceilândia</h5>
+                                <h6>Outubro 2017</h6>
+                            </div>
+                        </div>
+                        <p>Diretor do comitê CDH Centro de Ensino Médio Model United Nations</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="https://github.com/user-attachments/assets/daaf9839-bd92-4c27-a140-799c17fed099" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const titleContainerQualification = document.getElementById("title-container-qualification");
+    const titleQualification = document.getElementById("title-qualification");
+
+    document.addEventListener("scroll", function () {
+        const headerHeight = 55
+        const titleHeightQualification = 330
+        const titleTopQualification = titleContainerQualification.offsetTop - headerHeight
+        const titleBottomQualification = titleContainerQualification.offsetHeight + titleTopQualification - titleHeightQualification
+        if (window.pageYOffset > titleTopQualification) {
+            if (window.pageYOffset < titleBottomQualification) {
+                titleQualification.style.position = "fixed";
+                titleQualification.style.top = "55px";
+                titleContainerQualification.style.alignItems = "normal"
+            } else {
+                titleQualification.style.position = "absolute"
+                titleQualification.style.top = "auto";
+                titleContainerQualification.style.alignItems = "end"
+            }
+        } else {
+            titleQualification.style.position = "relative"
+            titleQualification.style.top = "auto";
+            titleContainerWhat.style.alignItems = "normal"
+        }
+    });
+</script>
+    </div>
+
+    <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Repositório de Bordo</li>
+          <li><a class="u-email" href="mailto:your-email@example.com">https://leosilvagomes.github.io/repositorio-de-bordo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          <li><a href="https://github.com/LeoSilvaGomes"><svg class="svg-icon">
+                <use xlink:href="/repositorio-de-bordo/assets/minima-social-icons.svg#github"></use>
+              </svg> <span class="username">LeoSilvaGomes</span></a></li>
+          <li><a href="https://instagram.com/leosigomes"><svg class="svg-icon">
+                <use xlink:href="/repositorio-de-bordo/assets/minima-social-icons.svg#instagram"></use>
+              </svg> <span class="username">leosigomes</span></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso. </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+  </body>
+
+</html>

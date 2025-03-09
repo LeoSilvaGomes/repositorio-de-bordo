@@ -1,0 +1,56 @@
+<div id="qualification">
+    <div id="title-container-qualification" class="title-projetos-qualification title-vertical">
+        <h2 id="title-qualification">Certificados</h2>
+    </div>
+    <div class="title-mobile-qualification title-mobile">
+        <h2>Certificados</h2>
+    </div>
+    <div class="content-qualification">
+        <div class="box-content">
+            <div class="grid-content">
+                {% for item in site.qualification %}
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>{{ item.nome }}</h4>
+                            <div class="box-detail">
+                                <h5>{{ item.local }}</h5>
+                                <h6>{{ item.period }}</h6>
+                            </div>
+                        </div>
+                        <p>{{ item.description }}</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="{{item.permalink}}" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const titleContainerQualification = document.getElementById("title-container-qualification");
+    const titleQualification = document.getElementById("title-qualification");
+
+    document.addEventListener("scroll", function () {
+        const headerHeight = 55
+        const titleHeightQualification = 330
+        const titleTopQualification = titleContainerQualification.offsetTop - headerHeight
+        const titleBottomQualification = titleContainerQualification.offsetHeight + titleTopQualification - titleHeightQualification
+        if (window.pageYOffset > titleTopQualification) {
+            if (window.pageYOffset < titleBottomQualification) {
+                titleQualification.style.position = "fixed";
+                titleQualification.style.top = "55px";
+                titleContainerQualification.style.alignItems = "normal"
+            } else {
+                titleQualification.style.position = "absolute"
+                titleQualification.style.top = "auto";
+                titleContainerQualification.style.alignItems = "end"
+            }
+        } else {
+            titleQualification.style.position = "relative"
+            titleQualification.style.top = "auto";
+            titleContainerWhat.style.alignItems = "normal"
+        }
+    });
+</script>

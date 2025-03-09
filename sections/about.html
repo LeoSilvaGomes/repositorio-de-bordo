@@ -1,0 +1,53 @@
+<div id="about" class="about">
+    <div id="title-container-about" class="title-about title-vertical">
+        <h2 id="title-about" >Resumo</h2>
+    </div>
+    <div class="title-mobile-about title-mobile">
+        <h2>Resumo</h2>
+    </div>
+    <div class="about-wrapper">
+        {% for file in site.about %}
+            <div class="about-content">
+                <div class="about-title-content">
+                    <div class="about-title">
+                        <p>
+                            {{file.citation}}
+                        </p>
+                    </div>
+                </div>
+                <div class="about-description">
+                    <p>{{file.content | markdownify }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    const titleContainerAbout = document.getElementById("title-container-about");
+    const titleAbout = document.getElementById("title-about");
+    const headerAbout = document.getElementById("header");
+
+    document.addEventListener("scroll", function() {
+        const headerHeight = 60
+        const titleHeightAbout = 228
+        const titleTopAbout = titleContainerAbout.offsetTop - headerHeight
+        const titleBottomAbout = titleContainerAbout.offsetHeight + titleTopAbout - titleHeightAbout
+        if (window.pageYOffset > titleTopAbout) {
+            if (window.pageYOffset < titleBottomAbout) {
+                titleAbout.style.position = "fixed";
+                titleAbout.style.top = "55px";
+                titleContainerAbout.style.alignItems = "normal"
+                headerAbout.style.backgroundColor = "#262626"
+            } else {
+                titleAbout.style.position = "absolute"
+                titleAbout.style.top = "auto";
+                titleContainerAbout.style.alignItems = "end"
+            }
+        } else {
+            titleAbout.style.position = "relative"
+            titleAbout.style.top = "auto";
+            titleContainerAbout.style.alignItems = "normal"
+        }
+    });
+</script>

@@ -1,0 +1,103 @@
+<div id="profissional">
+    <div id="title-container-profissional" class="title-projetos-profissional  title-vertical">
+        <h2 id="title-profissional">Experiência</h2>
+    </div>
+    <div class="title-mobile-profissional title-mobile">
+        <h2>Experiência</h2>
+    </div>
+    <div class="wrapper-profissional">
+        <div class="content-profissional">
+            <div class="box-content">
+                <h3 id="title-profissional">Profissional</h3>
+                {% for experiences in site.profissional-experience %}
+                    <div class="wrapper-experience">
+                        <div class="box-title">
+                            <h4>{{ experiences.nome_empresa }}</h4>
+                            <div class="box-detail">
+                                <h6>{{ experiences.period }}</h6>
+                            </div>
+                        </div>
+                        <p>{{ experiences.description }}</p>
+                        <div class="profissional-details grid-content">
+                        {% for activity in experiences.activities %}
+                            <div>
+                                <h4>{{ activity.nome }}</h4>
+                                <h6>{{ activity.position }}</h6>
+                                <h6>{{ activity.period }}</h6>
+                                <p class="p2">{{ activity.link }}</p>
+                                <p class="p2">{{ activity.description }}</p>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="content-profissional project-section">
+            <div class="box-content">
+                <h3 id="title-profissional">Projetos</h3>
+                <div class="grid-content">
+                    {% for experiences in site.project-experience %}
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>{{ experiences.nome }}</h4>
+                                <div class="box-detail">
+                                    <h6>{{ experiences.period }}</h6>
+                                    <h6>{{ experiences.position }}</h6>
+                                    <h6>{{ experiences.link }}</h6>
+                                </div>
+                            </div>
+                            <p>{{ experiences.description }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="content-profissional">
+            <div class="box-content">
+                <h3 id="title-profissional">Voluntariado</h3>
+                <div class="grid-content">
+                    {% for experiences in site.volunteer-experience %}
+                        <div class="wrapper-experience">
+                            <div class="box-title">
+                                <h4>{{ experiences.nome }}</h4>
+                                <div class="box-detail">
+                                    <h6>{{ experiences.period }}</h6>
+                                    <h6>{{ experiences.position }}</h6>
+                                </div>
+                            </div>
+                            <p>{{ experiences.description }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const titleContainerProfissional = document.getElementById("title-container-profissional");
+    const titleProfissional = document.getElementById("title-profissional");
+
+    document.addEventListener("scroll", function () {
+        const headerHeight = 55
+        const titleHeightProfissional = 331
+        const titleTopProfissional = titleContainerProfissional.offsetTop - headerHeight
+        const titleBottomProfissional = titleContainerProfissional.offsetHeight + titleTopProfissional - titleHeightProfissional
+        if (window.pageYOffset > titleTopProfissional) {
+            if (window.pageYOffset < titleBottomProfissional) {
+                titleProfissional.style.position = "fixed";
+                titleProfissional.style.top = "55px";
+                titleContainerProfissional.style.alignItems = "normal"
+            } else {
+                titleProfissional.style.position = "absolute"
+                titleProfissional.style.top = "auto";
+                titleContainerProfissional.style.alignItems = "end"
+            }
+        } else {
+            titleProfissional.style.position = "relative"
+            titleProfissional.style.top = "auto";
+            titleContainerWhat.style.alignItems = "normal"
+        }
+    });
+</script>

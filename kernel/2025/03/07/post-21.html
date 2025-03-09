@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <link rel="icon" href="data:,">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+  <title>
+    Kernel First Touch
+  </title>
+  <meta name="generator" content="Jekyll v3.9.5" />
+  <meta property="og:title" content="Blog" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <meta property="og:description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/07/post-21.html" />
+  <link rel="alternate" type="application/rss+xml" title="Repositório de Bordo" href="https://leosilvagomes.github.io/repositorio-de-bordo /feed.xml">
+  <link rel="stylesheet" href="/repositorio-de-bordo/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+</head>
+
+  <body>
+
+    <header class="site-header" id="header">
+  <div class="wrapper">
+    <div class="header-content">
+      <a class="site-title" rel="author" href="/repositorio-de-bordo/">
+        <h4>Repositório de Bordo</h4>
+      </a>
+
+      <nav class="site-nav">
+        <div class="icontop">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <div id="hideicon">
+          <a href="/repositorio-de-bordo/#about" class='page-link'>Resumo</a>
+          <a href="/repositorio-de-bordo/#profissional" class='page-link'>Experiência</a>
+          <a href="/repositorio-de-bordo/#qualification" class='page-link'>Certificados</a>
+          <a class="page-link" href="/repositorio-de-bordo/blog">Blog</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("hideicon");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Kernel First Touch</h1>
+    <p class="post-meta">
+    	<time datetime="2025-03-07T18:50:50+00:00" itemprop="datePublished">Mar 7, 2025</time>
+	 
+		• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<span itemprop="name">LeoSilvaGomes</span>
+		</span>
+	
+
+
+	
+		• 
+        		<a href="/repositorio-de-bordo/category/kernel">
+            			#kernel 
+        		</a>
+    		
+	
+
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>O primeiro contato com o desenvolvimento para o kernel do linux foi um pouco tribulado. Não exatamente por causa do linux, mas muito pela falta de preparação minha para essa aula. Levei um computador que não mexia fazia alguns meses, onde todos os drivers estavam desatualizados, felizmente foi tranquilo ser resolvido, mas infelizmente demorou mais do que deveria.</p>
+
+<p>Logo após isso, durante a aula, eu pude iniciar o processo de configuração do ambiente para desenvolvimento de patchs ao kernel. Nesse sentido tivemos que configurar duas bibliotecas a <strong>QEMU e libvirt</strong>. A primeira vista parece simples, mas o tutorial já começa de ponta cabeça com o sumario ds comandos que vamos ver, se possível acredito que essa parte poderia ser algo colapsado para que não gere uma primeira visão ruim do first touch (mesmo que aquilo sirva para um acesso rapido aos comandos do toturial como um todo).</p>
+
+<p>Cheguei até a metade do tutorial, deixando minha dupla Derick codar um pouco, mas me incomodou muito a dificuldade que tivemos com o nosso ambiente, pois meu computador Ubuntu estava com teclado e o touch pad quebrados também 😅. Conversando com o monitor, eu decidi por conta própria utilizar minha máquina Ubuntu de forma remota.</p>
+
+<p>No outro dia eu segui a orientação do monitor de utilizar <a href="https://tailscale.com/">Tailscale</a> que me caiu como uma luva. Consegui fazer a configuração do meu ambiente com o meu outro computador Mac, super simples (recomendo), acesso o meu Ubuntu via ssh, então agora eu tenho o sistema que preciso via terminal sem a necessidade de passar pela dificuldade que estava passando na primeira aula.</p>
+
+<p>Mas (in)felizmente não me dei por vencido, geralmente eu não levo meu computador Mac para a faculdade pois tenho medo de ser roubado, por causa disso eu costumo levar apenas meu tablet. Por causa disso eu decidi fazer a interface no tablet também. Eu testei alguns aplicativos no ipad mini para que fosse possivel não apenas acessar via ssh, mas que fosse confortável fazer o resto da atividade via telinha.</p>
+
+<p>Após 1 dia tentando, consegui utilizando o aplicativo <a href="https://termius.com/">Termius</a>, terminei a configuração do meu setup, mas agora faltava eu terminar a configuração do ambiente do kernel. Decidi fazer isso também testando meu setup, então fui apenas com o meu tablet para a faculdade, liguei meu computador Ubuntu e… Tudo certo! Fiquei feliz e ainda por cima consegui finalizar a parte do tutorial.</p>
+
+<p>10/10, só quero dizer que a parte final do tutorial sobre <em>Troubleshooting</em> está desatualizada, está com uns caminhos nada a ver e acho que poderia ser resolvido ou pelo menos colocado em deprecated.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Repositório de Bordo</li>
+          <li><a class="u-email" href="mailto:your-email@example.com">https://leosilvagomes.github.io/repositorio-de-bordo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          <li><a href="https://github.com/LeoSilvaGomes"><svg class="svg-icon">
+                <use xlink:href="/repositorio-de-bordo/assets/minima-social-icons.svg#github"></use>
+              </svg> <span class="username">LeoSilvaGomes</span></a></li>
+          <li><a href="https://instagram.com/leosigomes"><svg class="svg-icon">
+                <use xlink:href="/repositorio-de-bordo/assets/minima-social-icons.svg#instagram"></use>
+              </svg> <span class="username">leosigomes</span></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso. </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
