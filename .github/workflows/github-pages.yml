@@ -1,7 +1,7 @@
 name: GitHub Pages
 
 on:
-  push:
+  commit:
     branches:
       - main  # ou o branch que você está usando
 
