@@ -4,11 +4,11 @@ title: Blog
 ---
 
 <div class="home">
-  <h4 class="filter-title">Filtros</h4>
+  <h3>Blog</h3>
+  <span class="filter-title">Filtros</span>
   <ul class="category-list">
     {% for category in site.categories %}
       <li><a class="category" name="{{ category | first }}" href="{{site.baseurl}}/category/{{ category | first }}">{{ category | first }}</a></li>
-      <span>•</span>
     {% endfor %}
   </ul>
 
