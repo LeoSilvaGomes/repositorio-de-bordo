@@ -86,9 +86,3 @@ jobs:
         with:
           commit_message: "Create post ${{ github.event.issue.title }}"
           branch: main
-
-      - name: Commit and Push changes - GH Pages
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Create post ${{ github.event.issue.title }}"
-          branch: gh-pages
