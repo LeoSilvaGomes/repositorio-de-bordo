@@ -2,13 +2,13 @@
  * Reset some basic elements
  */
 body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
 blockquote,
 pre,
 hr,
@@ -19,6 +19,98 @@ ul,
 figure {
   margin: 0;
   padding: 0;
+}
+
+/**
+ * Typography
+ */
+h1 {
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+
+h3 {
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+
+h6 {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+
+p {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+.p2 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+.title-vertical {
+  display: flex;
+  justify-content: center;
+
+  width: 100px;
+  
+  h2 {
+      margin: 0px;
+      padding: 40px 0px;
+
+      writing-mode: vertical-lr;
+      white-space: nowrap;
+  }
+  
+  @media only screen and (max-width: 770px) {
+      display: none;
+  }
+}
+
+.title-mobile {
+  display: none;
+        
+  padding: 10px 30px;
+
+  h2 {
+      margin: 12px 0;
+  }
+
+  @media only screen and (max-width: 770px) {
+      display: block;
+  }
 }
 
 /**
@@ -40,13 +132,13 @@ body {
 /**
   * Set `margin-bottom` to maintain vertical rhythm
   */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
 blockquote,
 pre,
 ul,
@@ -55,6 +147,12 @@ dl,
 figure,
 .highlight {
   margin-bottom: 15px;
+}
+
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 /**
@@ -98,31 +196,19 @@ li>ol {
 }
 
 /**
-  * Headings
-  */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-}
-
-/**
   * Links
   */
 a {
-  color: #eccd00;
+  color: $primary-color;
   text-decoration: none;
 }
 
 a:visited {
-  color: #1756a9;
+  color: $selected-color;
 }
 
 a:hover {
-  color: #111;
+  color: $hover-color;
   text-decoration: underline;
 }
 
@@ -403,7 +489,6 @@ table td {
 
 .category {
   font-size: 12px;
-  color: #1756a9;
   cursor: pointer;
 }
 
@@ -434,16 +519,24 @@ table td {
 .post-category {
   padding: 3px 5px;
   margin-right: 3px;
-  border: 1px solid #1756a9;
+  border: 1px solid $primary-color;
   border-radius: 6px;
   font-size: 12px;
+
+  &:visited {
+    border-color: $selected-color;
+  }
+
+  &:hover {
+    border-color: $hover-color;
+  }
 }
 
 .post-category-selected {
   padding: 3px 5px;
   margin-right: 3px;
-  color: #eccd00 !important;
-  border: 1px solid #eccd00;
+  color: $primary-color !important;
+  border: 1px solid $primary-color;
   border-radius: 6px;
   font-size: 12px;
 }
@@ -766,4 +859,59 @@ table td {
 
 .highlight .il {
   color: #099;
+}
+
+
+
+.box-content {
+  margin: 40px 50px 0px 50px;
+
+  @media only screen and (max-width: 770px) {
+      margin: 30px;
+      margin-bottom: 0px;
+      padding-left: 12px;
+      border-left: 1px solid;
+  }
+
+  .box-title{ 
+      margin-bottom: 2px;
+
+      h6 {
+          margin: 0;
+      }
+
+      h4 {
+          margin: 0;
+          color: $primary-color-black;
+      }
+  }
+
+
+  p {
+      margin: 0;
+  }
+}
+
+.box-certificate {
+  margin-top: 16px;
+}
+
+.certificate {
+
+  padding: 8px;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  &:visited {
+      color: $selected-color;
+      border-color: $selected-color;
+  }
+
+  &:hover {
+      color: $hover-color;
+      border-color: $hover-color;
+  }
 }

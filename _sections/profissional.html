@@ -1,20 +1,20 @@
 <div id="profissional">
-    <div id="title-container-profissional" class="title-projetos-profissional">
-        <h1 id="title-profissional">Experiência</h1>
+    <div id="title-container-profissional" class="title-projetos-profissional  title-vertical">
+        <h2 id="title-profissional">Experiência</h2>
     </div>
-    <div class="title-mobile-profissional">
-        <h1>Experiência</h1>
+    <div class="title-mobile-profissional title-mobile">
+        <h2>Experiência</h2>
     </div>
     <div class="wrapper-profissional">
         <div class="content-profissional">
             <div class="box-content">
-                <h1 id="title-profissional">Profissional</h1>
+                <h3 id="title-profissional">Profissional</h3>
                 {% for experiences in site.profissional-experience %}
                     <div class="wrapper-experience">
                         <div class="box-title">
-                            <h3>{{ experiences.nome_empresa }}</h3>
+                            <h4>{{ experiences.nome_empresa }}</h4>
                             <div class="box-detail">
-                                <p>{{ experiences.period }}</p>
+                                <h6>{{ experiences.period }}</h6>
                             </div>
                         </div>
                         <p>{{ experiences.description }}</p>
@@ -22,10 +22,10 @@
                         {% for activity in experiences.activities %}
                             <div>
                                 <h4>{{ activity.nome }}</h4>
-                                <p class="subtitle-details-profissional">{{ activity.position }}</p>
-                                <p class="subtitle-details-profissional">{{ activity.period }}</p>
-                                <p>{{ activity.link }}</p>
-                                <p class="description-details-profissional">{{ activity.description }}</p>
+                                <h6>{{ activity.position }}</h6>
+                                <h6>{{ activity.period }}</h6>
+                                <p class="p2">{{ activity.link }}</p>
+                                <p class="p2">{{ activity.description }}</p>
                             </div>
                         {% endfor %}
                         </div>
@@ -33,18 +33,18 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="content-profissional">
+        <div class="content-profissional project-section">
             <div class="box-content">
-                <h1 id="title-profissional">Projetos</h1>
+                <h3 id="title-profissional">Projetos</h3>
                 <div class="grid-content">
                     {% for experiences in site.project-experience %}
                         <div class="wrapper-experience">
                             <div class="box-title">
-                                <h3>{{ experiences.nome }}</h3>
+                                <h4>{{ experiences.nome }}</h4>
                                 <div class="box-detail">
-                                    <p>{{ experiences.period }}</p>
-                                    <p>{{ experiences.position }}</p>
-                                    <p>{{ experiences.link }}</p>
+                                    <h6>{{ experiences.period }}</h6>
+                                    <h6>{{ experiences.position }}</h6>
+                                    <h6>{{ experiences.link }}</h6>
                                 </div>
                             </div>
                             <p>{{ experiences.description }}</p>
@@ -55,15 +55,15 @@
         </div>
         <div class="content-profissional">
             <div class="box-content">
-                <h1 id="title-profissional">Voluntariado</h1>
+                <h3 id="title-profissional">Voluntariado</h3>
                 <div class="grid-content">
                     {% for experiences in site.volunteer-experience %}
                         <div class="wrapper-experience">
                             <div class="box-title">
-                                <h3>{{ experiences.nome }}</h3>
+                                <h4>{{ experiences.nome }}</h4>
                                 <div class="box-detail">
-                                    <p>{{ experiences.period }}</p>
-                                    <p>{{ experiences.position }}</p>
+                                    <h6>{{ experiences.period }}</h6>
+                                    <h6>{{ experiences.position }}</h6>
                                 </div>
                             </div>
                             <p>{{ experiences.description }}</p>
@@ -81,7 +81,7 @@
 
     document.addEventListener("scroll", function () {
         const headerHeight = 55
-        const titleHeightProfissional = 288
+        const titleHeightProfissional = 331
         const titleTopProfissional = titleContainerProfissional.offsetTop - headerHeight
         const titleBottomProfissional = titleContainerProfissional.offsetHeight + titleTopProfissional - titleHeightProfissional
         if (window.pageYOffset > titleTopProfissional) {

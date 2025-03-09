@@ -7,43 +7,13 @@
     }
 
     .title-mobile-profissional {
-        display: none;
-        
         background-color: white;
         color: #262626;
-        
-        padding: 10px 30px;
-    
-        h1 {
-            margin-bottom: 0px;
-        }
-    
-        @media only screen and (max-width: 770px) {
-            display: block;
-        }
     }
 
     .title-projetos-profissional {
         background-color: white;
-    
-        display: flex;
-        justify-content: center;
-    
         color: #262626;
-        width: 100px;
-    
-        
-        h1 {
-            margin: 0px;
-            padding: 40px 0px;
-            font-size: 40px;
-            writing-mode: vertical-lr;
-            white-space: nowrap;
-        }
-        
-        @media only screen and (max-width: 770px) {
-            display: none;
-        }
     }
 
     .content-profissional {
@@ -58,13 +28,12 @@
     }
 }
 
-.profissional-details {
-    h4 {
-        margin: 0px;
-        margin-top: 12px;
-        font-size: 18px;
-    }
+.project-section {
+    background-color: black;
+}
 
+.profissional-details {
+    margin-top: 12px;
 }
 
 .description-details-profissional {
@@ -72,12 +41,6 @@
     font-weight: 300;
     line-height: 16px;
     padding-top: 5px;
-}
-
-.subtitle-details-profissional {
-    font-weight: 100 !important;
-    font-size: 11px !important;
-    line-height: 14px;
 }
 
 .wrapper-profissional {
@@ -96,7 +59,7 @@
 
 .grid-content {
     display: grid;
-    gap: 0px 30px;
+    gap: 12px 30px;
     grid-template-columns: 1fr 1fr;
     
     

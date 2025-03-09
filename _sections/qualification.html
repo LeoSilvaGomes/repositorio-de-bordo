@@ -1,26 +1,30 @@
 <div id="qualification">
-    <div id="title-container-qualification" class="title-projetos-qualification">
-        <h1 id="title-qualification">Certificados</h1>
+    <div id="title-container-qualification" class="title-projetos-qualification title-vertical">
+        <h2 id="title-qualification">Certificados</h2>
     </div>
-    <div class="title-mobile-qualification">
-        <h1>Certificados</h1>
+    <div class="title-mobile-qualification title-mobile">
+        <h2>Certificados</h2>
     </div>
     <div class="content-qualification">
-        {% for item in site.qualification %}
         <div class="box-content">
-            <div class="box-title">
-                <h3>{{ item.nome }}</h3>
-                <div class="box-detail">
-                    <h4>{{ item.local }}</h4>
-                    <p>{{ item.period }}</p>
-                </div>
-            </div>
-            <p>{{ item.description }}</p>
-            <div class="box-certificate">
-                <a class="certificate" href="{{item.permalink}}" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+            <div class="grid-content">
+                {% for item in site.qualification %}
+                <div class="wrapper-experience">
+                        <div class="box-title box-title-qualification">
+                            <h4>{{ item.nome }}</h4>
+                            <div class="box-detail">
+                                <h5>{{ item.local }}</h5>
+                                <h6>{{ item.period }}</h6>
+                            </div>
+                        </div>
+                        <p>{{ item.description }}</p>
+                        <div class="box-certificate">
+                            <a class="certificate" href="{{item.permalink}}" target="_blank"><i class="fa fa-file"></i> Certificado</a>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
     </div>
 </div>
 
@@ -30,7 +34,7 @@
 
     document.addEventListener("scroll", function () {
         const headerHeight = 55
-        const titleHeightQualification = 302
+        const titleHeightQualification = 330
         const titleTopQualification = titleContainerQualification.offsetTop - headerHeight
         const titleBottomQualification = titleContainerQualification.offsetHeight + titleTopQualification - titleHeightQualification
         if (window.pageYOffset > titleTopQualification) {

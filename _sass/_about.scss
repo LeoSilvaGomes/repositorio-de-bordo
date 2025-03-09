@@ -9,41 +9,12 @@
 
 .title-about {
     background-color: #262626;
-
-    display: flex;
-    justify-content: center;
-
     color: white;
-    width: 100px;
-    
-    h1 {
-        margin: 0px;
-        padding: 40px 0px;
-        font-size: 40px;
-        writing-mode: vertical-lr;
-        white-space: nowrap;
-    }
-    
-    @media only screen and (max-width: 770px) {
-        display: none;
-    }
 }
 
 .title-mobile-about {
-    display: none;
-    
     background-color: #262626;
     color: white;
-    
-    padding: 10px 30px;
-
-    h1 {
-        margin-bottom: 0px;
-    }
-
-    @media only screen and (max-width: 770px) {
-        display: block;
-    }
 }
 
 svg {
@@ -97,7 +68,7 @@ svg {
             color: black;
 
             &:hover {
-                color: gray;
+                color: $hover-color;
             }
         }
     }
@@ -105,24 +76,10 @@ svg {
 
 .about-description {
     margin-top: 25px;
-
-    p {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    a {
-        color: #262626;
-        text-decoration: underline;
-    }
-
-    .keywords {
-        margin-bottom: 0px;
-    }
 }
 
 .habilities-content {
-    background-color: #eccd00;
+    background-color: $primary-color;
     padding: 30px 50px;
 
     @media only screen and (max-width: 770px) {
