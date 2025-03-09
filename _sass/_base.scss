@@ -425,6 +425,12 @@ table td {
   padding-left: 15px;
 }
 
+.footer-col {
+  p {
+    margin: 0px;
+  }
+}
+
 .footer-col-1 {
   width: -webkit-calc(35% - (30px / 2));
   width: calc(35% - (30px / 2));
