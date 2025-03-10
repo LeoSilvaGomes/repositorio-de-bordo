@@ -1,9 +1,9 @@
 title: Repositório de Bordo
 email: leonardogomes@ime.usp.br
 description: >- # this means to ignore newlines until "baseurl:"
-  Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso. 
-baseurl: "/repositorio-de-bordo" # the subpath of your site, e.g. /blog
-url: "https://leosilvagomes.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+  Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.
+baseurl: /repositorio-de-bordo
+url: https://leosilvagomes.github.io
 github_username: LeoSilvaGomes
 instagram_username: leosigomes
 
