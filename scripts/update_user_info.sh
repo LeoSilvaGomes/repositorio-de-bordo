@@ -5,5 +5,7 @@ echo "$GITHUB_ISSUE_BODY" >> ${file_path}
 # Verificar se o arquivo YAML está corretamente formatado
 python3 -c "import yaml; yaml.safe_load(open('${file_path}'))" || { echo 'Erro ao carregar o arquivo YAML'; exit 1; }
 
+cat ${file_path}
+
 # Executar o script Python para processar o arquivo YAML
-python3 scripts/process_user_info.py
+# python3 scripts/process_user_info.py
