@@ -92,7 +92,6 @@ jobs:
       - name: Edit user info
         if: github.event.label.name == 'letstart'
         run: |
-          pip install -r requirements.txt
           chmod +x ./scripts/update_user_info.sh
           ./scripts/update_user_info.sh
         shell: bash
