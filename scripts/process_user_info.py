@@ -2,20 +2,24 @@ import yaml
 
 # Carregar valores do arquivo YAML
 with open('user_info.yml', 'r') as file:
-    config = yaml.safe_load(file)
+    try:
+        config = yaml.safe_load(file)
+    except yaml.YAMLError as exc:
+        print(f"Erro ao carregar o arquivo YAML: {exc}")
+        exit(1)
 
-title = config['title']
-email = config['email']
-description = config['description']
-baseurl = config['baseurl']
-url = config['url']
-github_username = config['github_username']
-instagram_username = config['instagram_username']
-site_description_title = config['site_description_title']
-site_description = config['site_description']
-cor_principal = config['cor_principal']
-cor_de_selecao = config['cor_de_selecao']
-cor_mouse_sobre = config['cor_mouse_sobre']
+title = config.get('title', 'Default Title')
+email = config.get('email', 'default@example.com')
+description = config.get('description', 'Default Description')
+baseurl = config.get('baseurl', '/')
+url = config.get('url', 'https://example.com')
+github_username = config.get('github_username', 'default_username')
+instagram_username = config.get('instagram_username', 'default_username')
+site_description_title = config.get('site_description_title', 'Default Site Description Title')
+site_description = config.get('site_description', 'Default Site Description')
+cor_principal = config.get('cor_principal', '000000')
+cor_de_selecao = config.get('cor_de_selecao', '000000')
+cor_mouse_sobre = config.get('cor_mouse_sobre', '000000')
 
 # Atualizando arquivo config.yml
 with open('_config.yml', 'r') as file:
