@@ -22,7 +22,7 @@ cor_de_selecao = config.get('cor_de_selecao', '000000')
 cor_mouse_sobre = config.get('cor_mouse_sobre', '000000')
 
 # Atualizando arquivo config.yml
-with open('_config.yml', 'r') as file:
+with open('_config.yaml', 'r') as file:
     lines = file.readlines()
 
 lines[0] = 'title: ' + str(title) + '\n'
@@ -33,7 +33,7 @@ lines[5] = 'url: ' + str(url) + '\n'
 lines[6] = 'github_username: ' + str(github_username) + '\n'
 lines[7] = 'instagram_username: ' + str(instagram_username) + '\n'
 
-with open('_config.yml', 'w') as file:
+with open('_config.yaml', 'w') as file:
     file.writelines(lines)
 
 
