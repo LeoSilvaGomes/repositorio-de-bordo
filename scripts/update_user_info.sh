@@ -1,4 +1,4 @@
-file_path="./user_info.yml"
+file_path="user_info.yaml"
 
 echo "$GITHUB_ISSUE_BODY" >> ${file_path}
 
