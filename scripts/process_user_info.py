@@ -1,7 +1,7 @@
 import yaml
 
 # Carregar valores do arquivo YAML
-with open('user_info.yml', 'r') as file:
+with open('user_info.yaml', 'r') as file:
     try:
         config = yaml.safe_load(file)
     except yaml.YAMLError as exc:
