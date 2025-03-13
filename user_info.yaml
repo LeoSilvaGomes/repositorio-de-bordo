@@ -1,12 +1,12 @@
-title: "Título do Site"
-email: "email@example.com"
-description: "Descrição do site"
-baseurl: "/baseurl"
-url: "https://example.com"
-github_username: "username"
-instagram_username: "username"
-site_description_title: "Título da Descrição"
-site_description: "Descrição detalhada do site"
+title: Repositório de Bordo
+email: leonardogomes@ime.usp.br
+description: Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.
+baseurl: /repositorio-de-bordo
+url: https://leosilvagomes.github.io
+github_username: LeoSilvaGomes
+instagram_username: leosigomes
+site_description_title: "Leo's"
+site_description: Eu sou o Leonardo Gomes, sou um viajante nesse mundo a procura de **perguntas** para esse mundo cheio de respostas. Que aqui se estabeleça minhas inseguranças, vivências e erros. Que aqui eu possa poetizar, roteirizar e julgar com o coração aberto.
 cor_principal: "03875e"
 cor_de_selecao: "9B2915"
 cor_mouse_sobre: "3A2449"
