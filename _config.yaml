@@ -5,8 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: /repositorio-de-bordo
 url: https://leosilvagomes.github.io
 github_username: LeoSilvaGomes
-instagram_username: leosigomes
-
+instagram_username: ""
 collections:
   sections:
     output: true
@@ -24,17 +23,14 @@ collections:
     output: true
   habilities:
     output: false
-
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-archives
-  
 jekyll-archives:
   enabled:
     - categories
   layout: archive
   permalinks:
     category: '/category/:name/'
-
