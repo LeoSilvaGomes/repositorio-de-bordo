@@ -3,7 +3,11 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # ou o branch que você está usando
+      - main
+  workflow_run:
+    workflows: [Edit Markdown, Delete Markdown]
+    types:
+      - completed
 
 jobs:
   build:

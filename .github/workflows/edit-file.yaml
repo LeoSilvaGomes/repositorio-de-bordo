@@ -101,11 +101,3 @@ jobs:
         with:
           commit_message: "Create post ${{ github.event.issue.title }}"
           branch: main
-
-  build:
-    runs-on: ubuntu-latest
-    needs: edit-file
-
-    steps:
-    - name: Update repository
-      uses: LeoSilvaGomes/repositorio-de-bordo/.github/workflows/github-pages.yml@main
