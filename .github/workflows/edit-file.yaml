@@ -27,7 +27,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Create issue as Markdown file for Post
-        if: github.event.issue.labels.name == 'post'
+        if: github.event.issue.labels[0].name == 'post'
         run: |
           chmod +x ./scripts/delete/delete_post.sh
           ./scripts/delete/delete_post.sh
