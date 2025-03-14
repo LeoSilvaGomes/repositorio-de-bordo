@@ -107,6 +107,5 @@ jobs:
     needs: edit-file
 
     steps:
-    - name: Check out the repository
-      uses: actions/checkout@v2
+    - name: Update repository
       uses: LeoSilvaGomes/repositorio-de-bordo/.github/workflows/github-pages.yml@main
