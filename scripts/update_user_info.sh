@@ -32,11 +32,11 @@ yq eval ".instagram_username = \"$instagram_username\"" -i ${config_file}
 
 # Atualizando arquivo _about/sobre-a-pessoa.md
 about_file="_about/sobre-a-pessoa.md"
-sed -i '' "2s/.*/citation: $site_description_title/" ${about_file}
-sed -i '' "4s/.*/$site_description/" ${about_file}
+sed -i "2s/.*/citation: $site_description_title/" ${about_file}
+sed -i "4s/.*/$site_description/" ${about_file}
 
 # Atualizando estilos
 scss_file="css/main.scss"
-sed -i '' "20s/.*/\$primary-color: #$cor_principal;/" ${scss_file}
-sed -i '' "21s/.*/\$selected-color: #$cor_de_selecao;/" ${scss_file}
-sed -i '' "22s/.*/\$hover-color: #$cor_mouse_sobre;/" ${scss_file}
+sed -i "20s/.*/\$primary-color: #$cor_principal;/" ${scss_file}
+sed -i "21s/.*/\$selected-color: #$cor_de_selecao;/" ${scss_file}
+sed -i "22s/.*/\$hover-color: #$cor_mouse_sobre;/" ${scss_file}
