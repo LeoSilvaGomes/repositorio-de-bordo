@@ -109,4 +109,4 @@ jobs:
     steps:
     - name: Check out the repository
       uses: actions/checkout@v2
-      uses: LeoSilvaGomes/repositorio-de-bordo/blob/main/.github/workflows/github-pages.yml@main
+      uses: LeoSilvaGomes/repositorio-de-bordo/.github/workflows/github-pages.yml@main
