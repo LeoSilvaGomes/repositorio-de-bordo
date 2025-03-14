@@ -5,7 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: /repositorio-de-bordo
 url: https://leosilvagomes.github.io
 github_username: LeoSilvaGomes
-instagram_username: ""
+instagram_username: "leosigomes"
 collections:
   sections:
     output: true
