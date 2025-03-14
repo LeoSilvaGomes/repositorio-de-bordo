@@ -27,7 +27,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Create issue as Markdown file for Post
-        if: github.event.label.name == 'post'
+        if: github.event.label.label.name == 'post'
         run: |
           chmod +x ./scripts/delete/delete_post.sh
           ./scripts/delete/delete_post.sh
@@ -36,7 +36,7 @@ jobs:
         shell: bash
       
       - name: Create issue as Markdown file for Profissional Experience
-        if: github.event.label.name == 'experiencia_profissional'
+        if: github.event.label.label.name == 'experiencia_profissional'
         run: |
           chmod +x ./scripts/delete/delete_experiencia_profissional.sh
           ./scripts/delete/delete_experiencia_profissional.sh
@@ -45,7 +45,7 @@ jobs:
         shell: bash
 
       - name: Create issue as Markdown file for Volunteer Experience
-        if: github.event.label.name == 'experiencia_voluntaria'
+        if: github.event.label.label.name == 'experiencia_voluntaria'
         run: |
           chmod +x ./scripts/delete/delete_experiencia_volunteer.sh
           ./scripts/delete/delete_experiencia_volunteer.sh
@@ -54,7 +54,7 @@ jobs:
         shell: bash
 
       - name: Create issue as Markdown file for Project Experience
-        if: github.event.label.name == 'experiencia_em_projeto'
+        if: github.event.label.label.name == 'experiencia_em_projeto'
         run: |
           chmod +x ./scripts/delete/delete_experiencia_project.sh
           ./scripts/delete/delete_experiencia_project.sh
@@ -63,7 +63,7 @@ jobs:
         shell: bash
 
       - name: Create issue as Markdown file for Profissional Experience
-        if: github.event.label.name == 'experiencia_profissional'
+        if: github.event.label.label.name == 'experiencia_profissional'
         run: |
           chmod +x ./scripts/delete/delete_experiencia_profissional.sh
           ./scripts/delete/delete_experiencia_profissional.sh
@@ -72,7 +72,7 @@ jobs:
         shell: bash
 
       - name: Create issue as Markdown file for Volunteer Experience
-        if: github.event.label.name == 'experiencia_voluntaria'
+        if: github.event.label.label.name == 'experiencia_voluntaria'
         run: |
           chmod +x ./scripts/delete/delete_experiencia_volunteer.sh
           ./scripts/delete/delete_experiencia_volunteer.sh
@@ -81,7 +81,7 @@ jobs:
         shell: bash
 
       - name: Create issue as Markdown file for Project Experience
-        if: github.event.label.name == 'experiencia_em_projeto'
+        if: github.event.label.label.name == 'experiencia_em_projeto'
         run: |
           chmod +x ./scripts/delete/delete_experiencia_project.sh
           ./scripts/delete/delete_experiencia_project.sh
@@ -90,7 +90,7 @@ jobs:
         shell: bash
       
       - name: Edit user info
-        if: github.event.label.name == 'letstart'
+        if: github.event.label.label.name == 'letstart'
         run: |
           chmod +x ./scripts/update_user_info.sh
           ./scripts/update_user_info.sh
