@@ -21,7 +21,7 @@ cor_de_selecao=$(yq eval '.cor_de_selecao' ${file_path})
 cor_mouse_sobre=$(yq eval '.cor_mouse_sobre' ${file_path})
 
 # Atualizando arquivo _config.yml
-config_file="_config.yml"
+config_file="_config.yaml"
 yq eval ".title = \"$title\"" -i ${config_file}
 yq eval ".email = \"$email\"" -i ${config_file}
 yq eval ".description = \"$description\"" -i ${config_file}
