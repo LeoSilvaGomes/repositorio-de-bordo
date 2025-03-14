@@ -87,21 +87,4 @@ jobs:
     steps:
     - name: Check out the repository
       uses: actions/checkout@v2
-
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.0'  # ou a versão do Ruby que você está usando
-
-    - name: Install dependencies
-      run: bundle install
-
-    - name: Build the site
-      run: bundle exec jekyll build
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
-
+      uses: LeoSilvaGomes/repositorio-de-bordo/.github/workflows/github-pages.yml@main
