@@ -1,5 +1,5 @@
 ---
-name: Post
+name: 1. Post
 about: "---"
 title: ''
 labels: post
