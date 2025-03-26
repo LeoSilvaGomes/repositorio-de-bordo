@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-03-25T17:39:37+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Criando o primeiro modulo no kernel</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/25/post-27.html" rel="alternate" type="text/html" title="Criando o primeiro modulo no kernel" /><published>2025-03-25T17:38:47+00:00</published><updated>2025-03-25T17:38:47+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/25/post-27</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/25/post-27.html"><![CDATA[<p>Já vou começar dizendo que essa foi de longe a parte mais demorada e não é porque o tutorial não estava preparado para possiveis erros de principiantes.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-03-26T21:02:43+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Mexendo com drivers ⚙️</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/26/post-28.html" rel="alternate" type="text/html" title="Mexendo com drivers ⚙️" /><published>2025-03-26T21:01:57+00:00</published><updated>2025-03-26T21:01:57+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/26/post-28</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/26/post-28.html"><![CDATA[<p>Como expectativa da aula, eu e minha dupla terminamos nossas coisas na aula e isso é muito bom porque trocamos experiências que tivemos fora da disciplina também. Derick estava me explicando um pouco mais sobre os <em>drivers</em> e isso foi muito bom para entender o exercicio no todo.</p>
+
+<p>Hoje fizemos um tutorial de criar um drive de character na árvore do <strong>iio</strong> (https://flusp.ime.usp.br/kernel/char-drivers-intro/). Só teve um momento que eu travei… no momento de buildar o modulo, onde quando fui copiar o arquivo <code class="language-plaintext highlighter-rouge">.ko</code> para dentro da <em>vm</em> acabei copiando para um arquivo e não para a pasta:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Errado sem o barra no final</span>
+<span class="nb">cp </span>simple_char.ko /lib/modules/<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-r</span><span class="sb">`</span>/kernel/drivers/char
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Certo com o barra no final</span>
+<span class="nb">cp </span>simple_char.ko /lib/modules/<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-r</span><span class="sb">`</span>/kernel/drivers/char/
+</code></pre></div></div>
+
+<p>Após isso foi muito tranquilo terminar o tutorial… por fim ao rodar os arquivos <code class="language-plaintext highlighter-rouge">.c</code> o buffer rodou umas saidas estranhas, os monitores (David e Rafael) respoderam que pode ser algo da execução da <em>vm</em>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@localhost:~# ./read_prog simple_char_node
+Read buffer: ���
+root@localhost:~# ./write_prog simple_char_node
+Error: 9wrote <span class="nt">-1</span> bytes to buffer
+</code></pre></div></div>
+
+<p>Mas finalizaram que tava tudo certo, que no final tanto o <em>driver</em> que criamos quando o código estão <strong>10</strong>.</p>
+
+<hr />
+
+<h3 id="sugestões-de-correções">Sugestões de correções</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@host
+aarch64-linux-gnu-gcc read_prog.c <span class="nt">-o</span> read_prog
+scp read_prog root@&lt;VM-IP-ADDRESS&gt;:~/
+@VM
+root@localhost:~# ./read_prog simple_char_node
+</code></pre></div></div>
+
+<p>Esse código em cima não segue uma consistência dos outros tutoriais, acredito que deva separar entre o que é rodado no host e o que é rodado na VM</p>
+
+<p>Além disso, como o tutorial é para primeiro contato do desenvolvedor acredito que pode ser referenciado os arquivos de tutoriais anteriores quando necessário, como no momento em que precisamos copiar o modulo para dentro da <em>vm</em> e <em>buildar</em>.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[Como expectativa da aula, eu e minha dupla terminamos nossas coisas na aula e isso é muito bom porque trocamos experiências que tivemos fora da disciplina também. Derick estava me explicando um pouco mais sobre os drivers e isso foi muito bom para entender o exercicio no todo.]]></summary></entry><entry><title type="html">Criando o primeiro modulo no kernel</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/25/post-27.html" rel="alternate" type="text/html" title="Criando o primeiro modulo no kernel" /><published>2025-03-25T17:38:47+00:00</published><updated>2025-03-25T17:38:47+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/25/post-27</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/25/post-27.html"><![CDATA[<p>Já vou começar dizendo que essa foi de longe a parte mais demorada e não é porque o tutorial não estava preparado para possiveis erros de principiantes.</p>
 
 <p>Antes de eu falar dos erros que aconteceu, gostaria de começar pelas dúvidas que não consegui resposta de primeira e que não apresentava no tutorial</p>
 

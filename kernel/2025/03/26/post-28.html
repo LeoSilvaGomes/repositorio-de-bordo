@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
   <title>
-    kernel
+    Mexendo com drivers  ⚙️
   </title>
   <meta name="generator" content="Jekyll v3.9.5" />
   <meta property="og:title" content="Blog" />
@@ -16,7 +16,7 @@
     content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
   <meta property="og:description"
     content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/category/kernel/" />
+  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/26/post-28.html" />
   <link rel="alternate" type="application/rss+xml" title="Repositório de Bordo" href="https://leosilvagomes.github.io/repositorio-de-bordo /feed.xml">
   <link rel="stylesheet" href="/repositorio-de-bordo/css/main.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
@@ -63,69 +63,73 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-  <h3>Blog</h3>
-  <span class="filter-title">Filtrado por</span>
-  <ul class="category-list">
-      <li><a class="category" name="" href="/repositorio-de-bordo/blog">kernel</a></li>
-  </ul>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Mar 26, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/26/post-28.html">Mexendo com drivers  ⚙️</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 25, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/25/post-27.html">Criando o primeiro modulo no kernel</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 14, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/14/post-25.html">First touch on KW</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 7, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/07/post-21.html">Kernel First Touch</a>
-      </li>
-    
-  </ul>
-</div>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Mexendo com drivers  ⚙️</h1>
+    <p class="post-meta">
+    	<time datetime="2025-03-26T21:01:57+00:00" itemprop="datePublished">Mar 26, 2025</time>
+	 
+		• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<span itemprop="name">LeoSilvaGomes</span>
+		</span>
+	
+
+
+	
+		• 
+        		<a href="/repositorio-de-bordo/category/kernel">
+            			#kernel 
+        		</a>
+    		
+	
+
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Como expectativa da aula, eu e minha dupla terminamos nossas coisas na aula e isso é muito bom porque trocamos experiências que tivemos fora da disciplina também. Derick estava me explicando um pouco mais sobre os <em>drivers</em> e isso foi muito bom para entender o exercicio no todo.</p>
+
+<p>Hoje fizemos um tutorial de criar um drive de character na árvore do <strong>iio</strong> (https://flusp.ime.usp.br/kernel/char-drivers-intro/). Só teve um momento que eu travei… no momento de buildar o modulo, onde quando fui copiar o arquivo <code class="language-plaintext highlighter-rouge">.ko</code> para dentro da <em>vm</em> acabei copiando para um arquivo e não para a pasta:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Errado sem o barra no final</span>
+<span class="nb">cp </span>simple_char.ko /lib/modules/<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-r</span><span class="sb">`</span>/kernel/drivers/char
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Certo com o barra no final</span>
+<span class="nb">cp </span>simple_char.ko /lib/modules/<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-r</span><span class="sb">`</span>/kernel/drivers/char/
+</code></pre></div></div>
+
+<p>Após isso foi muito tranquilo terminar o tutorial… por fim ao rodar os arquivos <code class="language-plaintext highlighter-rouge">.c</code> o buffer rodou umas saidas estranhas, os monitores (David e Rafael) respoderam que pode ser algo da execução da <em>vm</em>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@localhost:~# ./read_prog simple_char_node
+Read buffer: ���
+root@localhost:~# ./write_prog simple_char_node
+Error: 9wrote <span class="nt">-1</span> bytes to buffer
+</code></pre></div></div>
+
+<p>Mas finalizaram que tava tudo certo, que no final tanto o <em>driver</em> que criamos quando o código estão <strong>10</strong>.</p>
+
+<hr />
+
+<h3 id="sugestões-de-correções">Sugestões de correções</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@host
+aarch64-linux-gnu-gcc read_prog.c <span class="nt">-o</span> read_prog
+scp read_prog root@&lt;VM-IP-ADDRESS&gt;:~/
+@VM
+root@localhost:~# ./read_prog simple_char_node
+</code></pre></div></div>
+
+<p>Esse código em cima não segue uma consistência dos outros tutoriais, acredito que deva separar entre o que é rodado no host e o que é rodado na VM</p>
+
+<p>Além disso, como o tutorial é para primeiro contato do desenvolvedor acredito que pode ser referenciado os arquivos de tutoriais anteriores quando necessário, como no momento em que precisamos copiar o modulo para dentro da <em>vm</em> e <em>buildar</em>.</p>
+
+
+  </div>
+
+</article>
+
       </div>
     </div>
 
