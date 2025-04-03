@@ -7,6 +7,6 @@ on:
 jobs:
   test-file:
     if: github.event.label || github.event.changes
-    uses: LeoSilvaGomes/jekyll-actions/.github/workflows/actions.yaml@main
+    uses: LeoSilvaGomes/jekyll-actions/.github/workflows/action.yaml@main
     with:
       post-tag: "test-post"
