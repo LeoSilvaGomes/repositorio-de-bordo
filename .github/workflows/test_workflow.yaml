@@ -11,6 +11,6 @@ jobs:
 
     steps:
       - name: Test modular workflow
-        uses: LeoSilvaGomes/jekyll-actions/blob/main/.github/workflows/actions.yaml@main
+        uses: LeoSilvaGomes/jekyll-actions/.github/workflows/actions.yaml@main
         with:
           post-tag: "test-post"
