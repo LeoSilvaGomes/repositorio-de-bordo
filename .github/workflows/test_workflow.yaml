@@ -5,12 +5,8 @@ on:
     types: [edited, labeled]
 
 jobs:
-  edit-file:
+  test-file:
     if: github.event.label || github.event.changes
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Test modular workflow
-        uses: LeoSilvaGomes/jekyll-actions/.github/workflows/actions.yaml@main
-        with:
-          post-tag: "test-post"
+    uses: LeoSilvaGomes/jekyll-actions/.github/workflows/actions.yaml@main
+    with:
+      post-tag: "test-post"
