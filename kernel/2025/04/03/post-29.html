@@ -103,7 +103,76 @@ Eu e minha dupla começamos a passar pelo <em>pad</em> de contribuição e vimos
 
 <h3 id="vamos-começar-a-contribuição">Vamos começar a contribuição</h3>
 
-<p>Depois de preparar o ambiente para agora sim contribuir na ramificação certa, no caso o <em>drm</em>,</p>
+<p>Depois de preparar o ambiente para agora sim contribuir na ramificação certa, no caso o <em>drm</em>, eu consegui fazer um <code class="language-plaintext highlighter-rouge">git grep dcn</code> que foi uma das indicações dos monitores para alteração.</p>
+
+<p>Apareceu bastante resultado e acabei indo no olho para ver qual funcionava melhor, fui passando por vários arquivos e encontrei dois que poderiam funcionar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> drivers/gpu/drm/amd/display/dc/dcn31/dcn31_apg.c
+<span class="o">&gt;</span> drivers/gpu/drm/amd/display/dc/dccg/dcn20/dcn20_dccg.c
+</code></pre></div></div>
+
+<p>Confirmei com o eu amigo sobre a minha hipotese e disse para a gente ir tentando cada um em um para a gente infrentar a barreiras e ir falando para o outro a cada passo…</p>
+
+<p><strong>Obs blackout:</strong> Como eu estava remoto eu estava com medo de meu computador desligar, então o dia chegou, no meio da minha visita a minha família eu fiquei off ao meu progresso, mas já tinha dado passos bem interessantes.</p>
+
+<p>Quando voltei a São Paulo, retomei o desenvolvimento e percebi um erro que não tinha notado, o <em>drm</em> não estava <em>buildando</em>, falei com o monitor e ele me disse que isso era problema com a arquitetura da vm, que no caso estava como <code class="language-plaintext highlighter-rouge">arm64</code>, fiz a modificação das configs para rodar em <code class="language-plaintext highlighter-rouge">x86_64</code> rodando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kw init <span class="nt">--template</span>
+<span class="o">&gt;</span> make <span class="nv">ARCH</span><span class="o">=</span>x86_64 allnoconfig 
+</code></pre></div></div>
+
+<p>Após isso, consegui buildar o <em>drm</em> tranquilamente e comecei as modificações do arquivo <code class="language-plaintext highlighter-rouge">dcn31_apg</code>, mudei então a função <code class="language-plaintext highlighter-rouge">construct</code> que era a função que estava com o nome faltando informação para o <em>ftrace</em>, a função estava com a declaração como <code class="language-plaintext highlighter-rouge">apg31_construct</code> e foi modificada para <code class="language-plaintext highlighter-rouge">dcn31_apg_construct</code>. modifiquei no <code class="language-plaintext highlighter-rouge">.c</code> e no <code class="language-plaintext highlighter-rouge">.h</code> como vi em um exemplo que o monitor compartilhou.</p>
+
+<p>Então após as modificações eu habilitei todas as dependencias e modulos para que eu conseguisse testar minhas alterações, modifiquei pelo <em>kw</em> com o comando <code class="language-plaintext highlighter-rouge">kw build --menu</code>. Nesse momento eu fiz a busca pelo <code class="language-plaintext highlighter-rouge">F8</code> e procurei pelo <code class="language-plaintext highlighter-rouge">DRM_AMD_DC</code>, <em>config</em> que minha alteração fazia parte, descobri que essa <em>config</em> apenas caminha pelo <em>path</em> de onde minha alteração estava até encontrar um arquivo <code class="language-plaintext highlighter-rouge">Kconfig</code>, ou seja:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>drivers/gpu/drm/amd/display/dc/dcn31
+drivers/gpu/drm/amd/display/dc/dcn31/ <span class="nv">$ </span><span class="nb">cd</span> ..
+drivers/gpu/drm/amd/display/dc/ <span class="nv">$ </span><span class="nb">ls</span>                <span class="c"># não encontrei Kconfig, repete cd .. até encontrar</span>
+</code></pre></div></div>
+
+<p>Após habilitado, rodei o build e pela minha surpresa e felicidade deu erro ⭐ , significa que o modulo foi habilitado e que agora eu tinha algumas coisas para ajustar, então segue o passo a passo do que aconteceu:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Erro nos arquivos que dependem da função alterada</th>
+      <th style="text-align: left"><code class="language-plaintext highlighter-rouge">git grep</code> para buscar arquivos que preciso modificar</th>
+      <th style="text-align: left">Resultado das alterações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/e7aa291a-9981-434d-bf66-5d53b6cedd05" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/1b76e7ba-7598-421a-8f2d-cb946144d194" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/d8394a7d-b19d-4412-b572-93143d84c93f" alt="Image" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Então após fazer as correções eu fiz o:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> git add <span class="nb">.</span>
+<span class="o">&gt;</span> git commit                       <span class="c"># escrevi a mensagem detalhada</span>
+</code></pre></div></div>
+
+<p>Após refazer a mensagem de commit várias vezes até ficar satisfeito eu rodei o comando para enviar o email:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kw send-patch <span class="nt">--send</span> <span class="nt">-1</span> <span class="nt">--simulate</span> <span class="nt">--private</span> <span class="nt">--to</span><span class="o">=</span>freesoftware2025@gmail.com
+</code></pre></div></div>
+
+<p>🎉  AEEE tudo certo ~Infelizmente não~</p>
+
+<p>Eu tinha deixado o <code class="language-plaintext highlighter-rouge">--simulate</code>no comando e não tinha percebido que na verdade eu não tinha enviado e apenas simulado o envio, então eu finalmente removi esse <em>flag</em> fiz as configurações do <em>smtp</em> que precisava e do meu email google (com a ajuda do monitor) e finalmente consegui enviar com o comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kw send-patch <span class="nt">--send</span> <span class="nt">-1</span> <span class="nt">--private</span> <span class="nt">--to</span><span class="o">=</span>freesoftware2025@gmail.com <span class="nt">--cc</span><span class="o">=</span>leonardodasigomes@gmail.com
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="comentários">Comentários</h3>
+
+<p>Foi muito tranquilo a contribuição em si, o que deu mais problema foi a questão de modificação e mudanças de rotas ocorridas nesse processo que ocasionou em mais configurações de ambiente. Além disso houve um atraso por parte da indisponibilidade da minha maquina remota por algum tempo, mas nada que não fosse resolvido um tempinho depois.</p>
+
 
   </div>
 
