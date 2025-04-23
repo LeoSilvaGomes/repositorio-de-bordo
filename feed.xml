@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-04-23T13:54:03+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">First patch ⭐ - Adjust prefix of dcn31_apg construct function name</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29.html" rel="alternate" type="text/html" title="First patch ⭐ - Adjust prefix of dcn31_apg construct function name" /><published>2025-04-03T17:51:29+00:00</published><updated>2025-04-03T17:51:29+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29.html"><![CDATA[<p><strong>Obs inicial:</strong> Esse relato faz parte da disciplina de Software Livre ministrada pelo Professor Paulo Meirelles dada no IME - USP. Alguns comentários são referentes a prazos que a própria disciplina delimita.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-04-23T15:44:10+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Update patch 👓 - Review by class mentors</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30.html" rel="alternate" type="text/html" title="Update patch 👓 - Review by class mentors" /><published>2025-04-23T15:43:18+00:00</published><updated>2025-04-23T15:43:18+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30.html"><![CDATA[<p>Após o envio do patch para o email <code class="language-plaintext highlighter-rouge">freesoftware2025@gmail.com</code> que corresponde ao email da disciplina, recebi meu primeiro review.</p>
+
+<p>O primeiro ajuste que foi pedido era sobre a mensagem do commit que incluia dua correções:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On 4/23/25 07:43, Leonardo Gomes wrote:
+&gt; From: Leonardo da Silva Gomes &lt;[leonardodasigomes@gmail.com](mailto:leonardodasigomes@gmail.com)&gt;
+&gt;
+&gt; This commmit adjust the dcn31_apg construct function name from
+&gt; 'apg31_construct' to 'dcn31_apg_construct'.
+
+Aqui, use um verbo no imperativo. Então ao invés de "This commit
+adjust", use "Adjust the dcn...".
+</code></pre></div></div>
+
+<p>e adicionar o <code class="language-plaintext highlighter-rouge">Signed-off-by</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Signed-off-by: Leonardo da Silva Gomes &lt;<span class="o">[</span>leonardodasigomes@gmail.com]<span class="o">(</span>mailto:leonardodasigomes@gmail.com<span class="o">)&gt;</span>
+Co-developed-by: Derick Frias &lt;<span class="o">[</span>derick.william.moraes@gmail.com]<span class="o">(</span>mailto:derick.william.moraes@gmail.com<span class="o">)&gt;</span>
+Signed-off-by: Derick Frias &lt;<span class="o">[</span>derick.william.moraes@gmail.com]<span class="o">(</span>mailto:derick.william.moraes@gmail.com<span class="o">)&gt;</span>
+</code></pre></div></div>
+
+<p>O segundo comentário e ajuste era sobre o padrão do titulo do <em>commit</em> para usar sempre colocar o <em>path</em> (no meu caso <code class="language-plaintext highlighter-rouge">drm/amd/display:</code>) para facilitar a revisão.</p>
+
+<hr />
+
+<p>Depois dessa revisão já fiz os ajustes e já recebi a aprovação do monitor. Por fim enviei para o mantenedores do modulo e que vão realmente revisar o meu patch com o comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kw send-patch <span class="nt">--send</span> <span class="nt">-1</span> <span class="nt">--cc</span><span class="o">=</span>leonardodasigomes@gmail.com <span class="nt">--cc</span><span class="o">=</span>derick.william.moraes@gmail.com
+</code></pre></div></div>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[Após o envio do patch para o email freesoftware2025@gmail.com que corresponde ao email da disciplina, recebi meu primeiro review.]]></summary></entry><entry><title type="html">First patch ⭐ - Adjust prefix of dcn31_apg construct function name</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29.html" rel="alternate" type="text/html" title="First patch ⭐ - Adjust prefix of dcn31_apg construct function name" /><published>2025-04-03T17:51:29+00:00</published><updated>2025-04-03T17:51:29+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29.html"><![CDATA[<p><strong>Obs inicial:</strong> Esse relato faz parte da disciplina de Software Livre ministrada pelo Professor Paulo Meirelles dada no IME - USP. Alguns comentários são referentes a prazos que a própria disciplina delimita.</p>
 
 <p>Finalmente chegamos na nossa contribuição para o kernel, depois de fazer várias configurações e decidir utilizar o <em>iio</em> (em primeiro momento).</p>
 
@@ -264,23 +292,4 @@ Meu nome é Leonardo Gomes, sou orientando do Paulo.</p>
 
 <p>Já ouvi falar que trauma é uma ferida no cérebro e que demora para cicatrizar e mesmo quando cicatriza ela ainda está lá, ela nunca vai sair, talvez vire parte da sua identidade como a cicatriz de um pirata.</p>
 
-<p>Mas como sou novo e ainda não sei lidar com muitas coisas na vida eu acho que vou continuar só respirando, quem sabe assoprar o machucado não melhore mesmo.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="pessoal" /><summary type="html"><![CDATA[Acredito que tudo ao extremo é ruim, quando comemos muito, quando fazemos muito exercício ou quando fazemos de menos, fazemos nada para sair da cama ou para ter um pouco de vitamina D no corpo.]]></summary></entry><entry><title type="html">Começando a pesquisar</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/mestrado/pessoal/2025/02/12/post-2.html" rel="alternate" type="text/html" title="Começando a pesquisar" /><published>2025-02-12T14:54:05+00:00</published><updated>2025-02-12T14:54:05+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/mestrado/pessoal/2025/02/12/post-2</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/mestrado/pessoal/2025/02/12/post-2.html"><![CDATA[<p><strong>Como começar uma pesquisa?</strong></p>
-
-<p>Obviamente existem muitos livros e métodos criados para impulsionar o pesquisador em sua pesquisa, eu acredito que muitos deles hoje estão atrelados a forma de produção em massa de conteúdo, que muitas vezes não simboliza um conteúdo realmente agregador. De qualquer forma, acredito que eu não posso muito fugir disso e muito mesmo afirmar isso com certeza. Além disso, não posso descaracterizar todo o empenho em produzir novas “coisas” por pesquisadores brilhantes, mas acredito que esse processo acelerado, nos faz não pensar, não apenas na importância do que está sendo produzido, porque não precisamos sempre produzir algo importante, mas no porque daquilo, mesmo que aquilo não seja algo valoroso. E esse porque vem de vários lados: individual, social, capital…</p>
-
-<p><strong>O que é a minha pesquisa?</strong></p>
-
-<p>Ainda não sei ao certo, estou tentando entender o que eu realmente quero no meu mestrado, enquanto conhecimento, mas acredito que sei o que quero com ele, de forma temporal e situacional. Hoje estou na USP, que me possibilita explorar várias partes da minha vida, uma delas o campo intelectual e acredito que falto muito do básico: escrever, ler, criticar, analisar, aprofundar.</p>
-
-<p>Voltando a pergunta, estou caminhando para escrever algo sobre os conceitos que rodeiam MLOPS, MLOPS esse que advoga a aproximação do ML (Machine Learning) e operações, esse último envolve desde manutenção na infraestrutura de forma física, por isso o nome operação, até a manutenção e aprimoramento dos processo/automações da criação atualização de novos produtos, que no caso de MLOPS produtos de ML. Além disso, é importante ressaltar que o foco da minha pesquisa, é entender que esse conceito deriva de outro conceito, mais abrangente, chamado DEVOPS (não entrarei a fundo sobre isso aqui).</p>
-
-<p><strong>O que eu preciso fazer na minha pesquisa?</strong></p>
-
-<p>Percebi que fazer uma pesquisa envolve várias outras pesquisas no processo, a primeira delas é uma revisão sistemático, que vira uma pesquisa, mas que se torna interessante quando podemos visualizar diferentes perspectivas sobre o mesmo assunto. Depois disso é desenvolver algum conceito (se for preciso na pesquisa em questão, na minha vai ser), e defendê-lo com embasamentos (revisão sistemática feita antes).</p>
-
-<p>Então hoje vou trazer só essa revisão, que vou me pautar em algumas perguntas para me direcionar a encontrar os artigos que quero.</p>
-
-<ul>
-  <li>O que é MLOPS?</li>
-  <li>Quais as estruturas de time em MLOPS?</li>
-</ul>]]></content><author><name>LeoSilvaGomes</name></author><category term="mestrado" /><category term="pessoal" /><summary type="html"><![CDATA[Como começar uma pesquisa?]]></summary></entry></feed>
+<p>Mas como sou novo e ainda não sei lidar com muitas coisas na vida eu acho que vou continuar só respirando, quem sabe assoprar o machucado não melhore mesmo.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="pessoal" /><summary type="html"><![CDATA[Acredito que tudo ao extremo é ruim, quando comemos muito, quando fazemos muito exercício ou quando fazemos de menos, fazemos nada para sair da cama ou para ter um pouco de vitamina D no corpo.]]></summary></entry></feed>

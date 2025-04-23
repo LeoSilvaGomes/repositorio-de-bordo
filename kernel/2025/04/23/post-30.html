@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
   <title>
-    kernel
+    Update patch 👓 - Review by class mentors
   </title>
   <meta name="generator" content="Jekyll v3.9.5" />
   <meta property="og:title" content="Blog" />
@@ -16,7 +16,7 @@
     content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
   <meta property="og:description"
     content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/category/kernel/" />
+  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30.html" />
   <link rel="alternate" type="application/rss+xml" title="Repositório de Bordo" href="https://leosilvagomes.github.io/repositorio-de-bordo /feed.xml">
   <link rel="stylesheet" href="/repositorio-de-bordo/css/main.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
@@ -63,95 +63,65 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-  <h3>Blog</h3>
-  <span class="filter-title">Filtrado por</span>
-  <ul class="category-list">
-      <li><a class="category" name="" href="/repositorio-de-bordo/blog">kernel</a></li>
-  </ul>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Apr 23, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/04/23/post-30.html">Update patch 👓 - Review by class mentors</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 3, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/04/03/post-29.html">First patch ⭐ - Adjust prefix of dcn31_apg construct function name</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 26, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/26/post-28.html">Mexendo com drivers  ⚙️</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 25, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/25/post-27.html">Criando o primeiro modulo no kernel</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 14, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/14/post-25.html">First touch on KW</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 7, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/07/post-21.html">Kernel First Touch</a>
-      </li>
-    
-  </ul>
-</div>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Update patch 👓 - Review by class mentors</h1>
+    <p class="post-meta">
+    	<time datetime="2025-04-23T15:43:18+00:00" itemprop="datePublished">Apr 23, 2025</time>
+	 
+		• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<span itemprop="name">LeoSilvaGomes</span>
+		</span>
+	
+
+
+	
+		• 
+        		<a href="/repositorio-de-bordo/category/kernel">
+            			#kernel 
+        		</a>
+    		
+	
+
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Após o envio do patch para o email <code class="language-plaintext highlighter-rouge">freesoftware2025@gmail.com</code> que corresponde ao email da disciplina, recebi meu primeiro review.</p>
+
+<p>O primeiro ajuste que foi pedido era sobre a mensagem do commit que incluia dua correções:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On 4/23/25 07:43, Leonardo Gomes wrote:
+&gt; From: Leonardo da Silva Gomes &lt;[leonardodasigomes@gmail.com](mailto:leonardodasigomes@gmail.com)&gt;
+&gt;
+&gt; This commmit adjust the dcn31_apg construct function name from
+&gt; 'apg31_construct' to 'dcn31_apg_construct'.
+
+Aqui, use um verbo no imperativo. Então ao invés de "This commit
+adjust", use "Adjust the dcn...".
+</code></pre></div></div>
+
+<p>e adicionar o <code class="language-plaintext highlighter-rouge">Signed-off-by</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Signed-off-by: Leonardo da Silva Gomes &lt;<span class="o">[</span>leonardodasigomes@gmail.com]<span class="o">(</span>mailto:leonardodasigomes@gmail.com<span class="o">)&gt;</span>
+Co-developed-by: Derick Frias &lt;<span class="o">[</span>derick.william.moraes@gmail.com]<span class="o">(</span>mailto:derick.william.moraes@gmail.com<span class="o">)&gt;</span>
+Signed-off-by: Derick Frias &lt;<span class="o">[</span>derick.william.moraes@gmail.com]<span class="o">(</span>mailto:derick.william.moraes@gmail.com<span class="o">)&gt;</span>
+</code></pre></div></div>
+
+<p>O segundo comentário e ajuste era sobre o padrão do titulo do <em>commit</em> para usar sempre colocar o <em>path</em> (no meu caso <code class="language-plaintext highlighter-rouge">drm/amd/display:</code>) para facilitar a revisão.</p>
+
+<hr />
+
+<p>Depois dessa revisão já fiz os ajustes e já recebi a aprovação do monitor. Por fim enviei para o mantenedores do modulo e que vão realmente revisar o meu patch com o comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kw send-patch <span class="nt">--send</span> <span class="nt">-1</span> <span class="nt">--cc</span><span class="o">=</span>leonardodasigomes@gmail.com <span class="nt">--cc</span><span class="o">=</span>derick.william.moraes@gmail.com
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
       </div>
     </div>
 
