@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
   <title>
-    kernel
+    First patch ⭐ - Adjust prefix of dcn31_apg construct function name
   </title>
   <meta name="generator" content="Jekyll v3.9.5" />
   <meta property="og:title" content="Blog" />
@@ -16,7 +16,7 @@
     content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
   <meta property="og:description"
     content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/category/kernel/" />
+  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29.html" />
   <link rel="alternate" type="application/rss+xml" title="Repositório de Bordo" href="https://leosilvagomes.github.io/repositorio-de-bordo /feed.xml">
   <link rel="stylesheet" href="/repositorio-de-bordo/css/main.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
@@ -63,82 +63,52 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-  <h3>Blog</h3>
-  <span class="filter-title">Filtrado por</span>
-  <ul class="category-list">
-      <li><a class="category" name="" href="/repositorio-de-bordo/blog">kernel</a></li>
-  </ul>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Apr 3, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/04/03/post-29.html">First patch ⭐ - Adjust prefix of dcn31_apg construct function name</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 26, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/26/post-28.html">Mexendo com drivers  ⚙️</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 25, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/25/post-27.html">Criando o primeiro modulo no kernel</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 14, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/14/post-25.html">First touch on KW</a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 7, 2025
-          
-            • 
-                  
-                    <a class="post-category-selected" href="/repositorio-de-bordo/blog">kernel</a>
-                  
-                
-          
-        </span>
-        <a class="post-link" href="/repositorio-de-bordo/kernel/2025/03/07/post-21.html">Kernel First Touch</a>
-      </li>
-    
-  </ul>
-</div>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">First patch ⭐ - Adjust prefix of dcn31_apg construct function name</h1>
+    <p class="post-meta">
+    	<time datetime="2025-04-03T17:51:29+00:00" itemprop="datePublished">Apr 3, 2025</time>
+	 
+		• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<span itemprop="name">LeoSilvaGomes</span>
+		</span>
+	
+
+
+	
+		• 
+        		<a href="/repositorio-de-bordo/category/kernel">
+            			#kernel 
+        		</a>
+    		
+	
+
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><strong>Obs inicial:</strong> Esse relato faz parte da disciplina de Software Livre ministrada pelo Professor Paulo Meirelles dada no IME - USP. Alguns comentários são referentes a prazos que a própria disciplina delimita.</p>
+
+<p>Finalmente chegamos na nossa contribuição para o kernel, depois de fazer várias configurações e decidir utilizar o <em>iio</em> (em primeiro momento).</p>
+
+<p><code class="language-plaintext highlighter-rouge">Por volta da primeira semana de abril</code>
+Eu e minha dupla começamos a passar pelo <em>pad</em> de contribuição e vimos algumas contribuições bem tranquilas. Nosso primeiro contato foi com o ajuste de algumas funções em alguma parte do modulo. Rodamos <code class="language-plaintext highlighter-rouge">git grep &lt;o nome da função&gt;</code> que queriamos modificar e acabamos encontrando algumas coisas que poderiam ser modificadas, entramos em contato com o monitor e ele nos orientou a continuar explorando e esperar pela proxima aula para acompanharmos a questão do envio do patch.</p>
+
+<p>Esperado a aula, minha dupla pode comparecer a disciplina e eu estava em um evento, nesse sentido após a aula me reuni com minha dupla para receber orientações de próximo passo e foi decidido que iriamos fazer alterações agora em outra parte do kernel… agora sendo o <em>drm</em> o nosso foco.</p>
+
+<p>Nesse momento entramos de férias (voltei para minha cidade natal e deixei minha maquina com linux ligada para acessar remotamente), tentei iniciar a contribuição, mas de primeiro eu não consegui acessar o pad, então entrei em contato com o monitor que me ajudou enviando o pdf do pad. A partir desse ponto eu consegui iniciar algumas coisas a respeito de clonar a nova ramificação, fazer a procura dos arquivos necessários para a modificação do problema que meu amigo tinha escolhido que no caso era <code class="language-plaintext highlighter-rouge">Code Refactor: Add prefix to DC functions to improve the debug with ftrace</code>.</p>
+
+<hr />
+
+<h3 id="vamos-começar-a-contribuição">Vamos começar a contribuição</h3>
+
+<p>Depois de preparar o ambiente para agora sim contribuir na ramificação certa, no caso o <em>drm</em>,</p>
+
+  </div>
+
+</article>
+
       </div>
     </div>
 
