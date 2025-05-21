@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <link rel="icon" href="data:,">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+  <title>
+    First touch in GNOME project ⭐
+  </title>
+  <meta name="generator" content="Jekyll v3.9.5" />
+  <meta property="og:title" content="Blog" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <meta property="og:description"
+    content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <link rel="canonical" href="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/05/21/post-32.html" />
+  <link rel="alternate" type="application/rss+xml" title="Repositório de Bordo" href="https://leosilvagomes.github.io/repositorio-de-bordo /feed.xml">
+  <link rel="stylesheet" href="/repositorio-de-bordo/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+</head>
+
+  <body>
+
+    <header class="site-header" id="header">
+  <div class="wrapper">
+    <div class="header-content">
+      <a class="site-title" rel="author" href="/repositorio-de-bordo/">
+        <h4>Repositório de Bordo</h4>
+      </a>
+
+      <nav class="site-nav">
+        <div class="icontop">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <div id="hideicon">
+          <a href="/repositorio-de-bordo/#about" class='page-link'>Resumo</a>
+          <a href="/repositorio-de-bordo/#profissional" class='page-link'>Experiência</a>
+          <a href="/repositorio-de-bordo/#qualification" class='page-link'>Certificados</a>
+          <a class="page-link" href="/repositorio-de-bordo/blog">Blog</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("hideicon");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">First touch in GNOME project ⭐</h1>
+    <p class="post-meta">
+    	<time datetime="2025-05-21T14:45:56+00:00" itemprop="datePublished">May 21, 2025</time>
+	 
+		• <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<span itemprop="name">LeoSilvaGomes</span>
+		</span>
+	
+
+
+	
+		• 
+        		<a href="/repositorio-de-bordo/category/Gnome">
+            			#Gnome 
+        		</a>
+    		
+	
+
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Muito diferente do Kernel, que a contribuição é via email (Raiz), no Gnome existe vários sites e uma repositório para fazer a gerencia dessas contribuições (Nutella):</p>
+
+<ul>
+  <li>https://developer.gnome.org/ - Site com guia de contribuição</li>
+  <li>https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1.7/ - Site para ajudar no entendimento das funções</li>
+  <li>https://gitlab.gnome.org/GNOME/ - Repositório com os projetos</li>
+</ul>
+
+<p>No repositório do Gnome é possível ver vários projetos nos quais você pode contribuir, como o <a href="https://gitlab.gnome.org/GNOME/gnome-calendar">calendar</a>, o <a href="https://gitlab.gnome.org/GNOME/gnome-control-center">settings</a>, dentre outros sistemas que compõe o universo do Gnome.</p>
+
+<p>Após dar uma olhada em vários repositórios e conversar com alguns colegas, principalmente o Andre Ijano sobre a possíveis issues que conseguiriamos contribuir, decidi por fazer uma issue do <code class="language-plaintext highlighter-rouge">Newcommers</code> do <strong>settings</strong>.</p>
+
+<p>O objetivo da issue era padronizar as barras de pesquisa dentro do sistemas, em questão de tamanho e de composição do componente. https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/3440</p>
+
+<p>Então clonei o repositório e tentei fazer a contribuição pelo <strong>Builder</strong> (https://apps.gnome.org/pt-BR/Builder/), esse que é uma IDE e que já proporciona rodar o projeto simulando a interface e funcionalidades do sistema atualizado.</p>
+
+<p>Após algumas tentativas e mais conversas com os colegas de sala, foi notado que a melhor forma de contribuir no settings na verdade é usando uma vm do fedora pelo toolbox e buildando via ninja. Então refiz as configurações do ninja, baixei as bibliotecas e tudo deu certo finalmente.</p>
+
+<hr />
+
+<h2 id="contribuição-código">Contribuição (Código)</h2>
+
+<p>Após investigar o que poderia estar causando essa despadronização nas barras de pesquisa, percebi que eles utilizam <code class="language-plaintext highlighter-rouge">.ui</code> para gerir boa parte da visualição e sua propriedades e diferente do <code class="language-plaintext highlighter-rouge">html</code> que passamos a classe e alteramos o estilo no <code class="language-plaintext highlighter-rouge">css</code>, aqui as propriedades é declarada fora da tag principal e já é especificado as propriedades de estilo.</p>
+
+<pre><code class="language-ui">&lt;object class="GtkSearchEntry" id="language_filter_entry"&gt;
+     &lt;property name="placeholder_text" translatable="yes"&gt;Language or country&lt;/property&gt;
+     &lt;property name="width_chars"&gt;30&lt;/property&gt;
++    &lt;property name="hexpand"&gt;True&lt;/property&gt;
++    &lt;property name="margin-start"&gt;6&lt;/property&gt;
++    &lt;property name="margin-end"&gt;6&lt;/property&gt;
+</code></pre>
+
+<p>No total eu alterei 5 componentes, que estavam despadronizados como pode ser visto abaixo</p>
+
+<h3 id="antes">Antes</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">cc-language-chooser</th>
+      <th style="text-align: left">cc-tz-dialog</th>
+      <th style="text-align: left">cc-format-chooser</th>
+      <th style="text-align: left">pp-new-dialog</th>
+      <th style="text-align: left">cc-input-chooser</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/5e69b206-79a3-460d-b6e4-093f9fbf6a44" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/754d066c-6478-4f98-9dbd-fc18990b308d" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/ca5da5a2-cf31-40f1-9bf2-d0e0dfdb9ffe" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/2a9f3220-be25-469e-bca9-c27061a6ec15" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/dd343d4f-830c-4b8a-8174-12ac82f72c10" alt="Image" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="depois">Depois</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">cc-language-chooser</th>
+      <th style="text-align: left">cc-tz-dialog</th>
+      <th style="text-align: left">cc-format-chooser</th>
+      <th style="text-align: left">pp-new-dialog</th>
+      <th style="text-align: left">cc-input-chooser</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/d945c478-ad4c-46fd-a3bb-4f41cfbeab6d" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/87de52c5-3bf3-4e84-8b1e-2bc4158e1099" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/648b074f-c124-4a07-80c4-ffe5f18fce13" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/c200b808-f699-4456-aaa6-2ef0b08b287b" alt="Image" /></td>
+      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/73c5e398-0964-4fbb-939b-b388af911f12" alt="Image" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>após isso eu abri o PR e já recebi alguns feedbacks sobre a mensagem e do código, mas estou esperando o feedback dos designs para confirmar o estilo proposto.</p>
+
+<p>https://gitlab.gnome.org/GNOME/gnome-control-center/-/merge_requests/3129</p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Repositório de Bordo</li>
+          <li><a href="https://leosilvagomes.github.io/repositorio-de-bordo/">https://leosilvagomes.github.io/repositorio-de-bordo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          <li><a href="https://github.com/LeoSilvaGomes"><svg class="svg-icon">
+                <use xlink:href="/repositorio-de-bordo/assets/minima-social-icons.svg#github"></use>
+              </svg> <span class="username">LeoSilvaGomes</span></a></li>
+          <li><a href="https://instagram.com/leosigomes"><svg class="svg-icon">
+                <use xlink:href="/repositorio-de-bordo/assets/minima-social-icons.svg#instagram"></use>
+              </svg> <span class="username">leosigomes</span></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
