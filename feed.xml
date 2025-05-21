@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-04-23T15:44:10+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Update patch 👓 - Review by class mentors</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30.html" rel="alternate" type="text/html" title="Update patch 👓 - Review by class mentors" /><published>2025-04-23T15:43:18+00:00</published><updated>2025-04-23T15:43:18+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30.html"><![CDATA[<p>Após o envio do patch para o email <code class="language-plaintext highlighter-rouge">freesoftware2025@gmail.com</code> que corresponde ao email da disciplina, recebi meu primeiro review.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-05-21T14:06:17+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">drm/adm/display Feedback patch</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/05/21/post-31.html" rel="alternate" type="text/html" title="drm/adm/display Feedback patch" /><published>2025-05-21T14:05:24+00:00</published><updated>2025-05-21T14:05:24+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/05/21/post-31</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/05/21/post-31.html"><![CDATA[<p>Após enviar o patch no mês passado, eu não tinha recebido nenhuma resposta dos mantenedores se o patch estava sendo revisado ou não. Isso porque o meu patch já tinha aparecido <a href="https://lore.kernel.org/amd-gfx/20250423153010.20019-1-leonardodasigomes@gmail.com/">lore</a>.</p>
+
+<p>Falei com o monitor (David) sobre o que estava acontecendo e ele me recomendou esperar umas 3 semanas que é o prazo máximo que pode demorar uma revisão tendo em vista o tipo de modicação e a complexidade, ou porque eles podem ter passado o patch despercebido dentre o tanto de contribuição que eles recebem. Dado a terceira semana decidimos por fazer o <strong>RESEND</strong>, então fizemos o mesmo commit da ultima vez</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kw send-patch <span class="nt">--send</span> <span class="nt">-2</span> <span class="nt">--cc</span><span class="o">=</span>leonardodasigomes@gmail.com <span class="nt">--cc</span><span class="o">=</span>derick.william.moraes@gmail.com
+</code></pre></div></div>
+
+<p>mas mudando o título do commit para RESEND, ou seja, ao invés de:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[PATCH 2/2] drm/amd/display: Adjust set_value function with prefix to help in ftrace
+</code></pre></div></div>
+
+<p>ficou</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[PATCH 2/2 RESEND] drm/amd/display: Adjust set_value function with prefix to help in ftrace
+</code></pre></div></div>
+<p>Após o reenvio não demorou um dia para eles me responderem para fazer uma alteração no nome da função. Eu tinha decidido por colocar o nome da função como <code class="language-plaintext highlighter-rouge">dal_hw_gpio_set_config</code>, mas o arquivo que eu estava modificando na verdade era o <code class="language-plaintext highlighter-rouge">hw_hpd.c</code> o que eles pediram para na verdade a gente colocar no nome da função como <code class="language-plaintext highlighter-rouge">dal_hw_hpd_set_config</code>.</p>
+
+<p>Após reenvio com as alterações que eles pediram, então recebi uma mensagem do <strong>Alex Deucher</strong> com a mensagem de confirmação…</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Applied the series.  Thanks!
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="plot-twist">Plot twist</h2>
+
+<p>No meu processo de contibuição eu criei um “regex” para conseguir identificar mais problemas como esse que eu tive onde a função não está muito relacionada <code class="language-plaintext highlighter-rouge">git grep -P '\.\b(\w+)\b = \b\1\b,'</code>, que pode ser usado em outros anos da matéria, nesse processo eu estava testando se as funções encontradas realmente faziam sentido e acabei criando o commit para as duas funções acima! Mas acabei não enviando o patch… Então o RESEND do patch na verdade é outro patch, que eu estava testando esse regex e acabei enviando sem querer (E que deu tudo certo).</p>
+
+<p>Então são 2 patchs:</p>
+<ul>
+  <li>Um patch corrigindo as funções <code class="language-plaintext highlighter-rouge">set_config</code> e <code class="language-plaintext highlighter-rouge">get_value</code> no arquivo <code class="language-plaintext highlighter-rouge">hw_hpd.c</code>, para não possuir nome ambiguo e ter uma rastreabilidade melhor</li>
+  <li>Um patch corrigindo a função <code class="language-plaintext highlighter-rouge">dcn31_apg_construct</code> para sinalizar que essa função é do dcn31.</li>
+</ul>
+
+<p>O primeiro patch foi enviado, revisado, atualizado e recebeu uma mensagem de approve.
+Já o segundo patch foi reenviado e está esperando a revisão.</p>
+
+<p>Foi uma experiencia muito boa, principalmente com o kw facilitou muito o reenvio do patch 😄</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="Kernel" /><summary type="html"><![CDATA[Após enviar o patch no mês passado, eu não tinha recebido nenhuma resposta dos mantenedores se o patch estava sendo revisado ou não. Isso porque o meu patch já tinha aparecido lore.]]></summary></entry><entry><title type="html">Update patch 👓 - Review by class mentors</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30.html" rel="alternate" type="text/html" title="Update patch 👓 - Review by class mentors" /><published>2025-04-23T15:43:18+00:00</published><updated>2025-04-23T15:43:18+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/23/post-30.html"><![CDATA[<p>Após o envio do patch para o email <code class="language-plaintext highlighter-rouge">freesoftware2025@gmail.com</code> que corresponde ao email da disciplina, recebi meu primeiro review.</p>
 
 <p>O primeiro ajuste que foi pedido era sobre a mensagem do commit que incluia dua correções:</p>
 
@@ -272,24 +310,4 @@ Meu nome é Leonardo Gomes, sou orientando do Paulo.</p>
 
 <p>Após 1 dia tentando, consegui utilizando o aplicativo <a href="https://termius.com/">Termius</a>, terminei a configuração do meu setup, mas agora faltava eu terminar a configuração do ambiente do kernel. Decidi fazer isso também testando meu setup, então fui apenas com o meu tablet para a faculdade, liguei meu computador Ubuntu e… Tudo certo! Fiquei feliz e ainda por cima consegui finalizar a parte do tutorial.</p>
 
-<p>10/10, só quero dizer que a parte final do tutorial sobre <em>Troubleshooting</em> está desatualizada, está com uns caminhos nada a ver e acho que poderia ser resolvido ou pelo menos colocado em deprecated.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[O primeiro contato com o desenvolvimento para o kernel do linux foi um pouco tribulado. Não exatamente por causa do linux, mas muito pela falta de preparação minha para essa aula. Levei um computador que não mexia fazia alguns meses, onde todos os drivers estavam desatualizados, felizmente foi tranquilo ser resolvido, mas infelizmente demorou mais do que deveria.]]></summary></entry><entry><title type="html">Respirando</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/pessoal/2025/02/20/post-19.html" rel="alternate" type="text/html" title="Respirando" /><published>2025-02-20T01:50:30+00:00</published><updated>2025-02-20T01:50:30+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/pessoal/2025/02/20/post-19</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/pessoal/2025/02/20/post-19.html"><![CDATA[<p>Acredito que tudo ao extremo é ruim, quando comemos muito, quando fazemos muito exercício ou quando fazemos de menos, fazemos nada para sair da cama ou para ter um pouco de vitamina D no corpo.</p>
-
-<p>Acho que é muito difícil lidar com extremos que escolhemos, mas extremos que foram escancarados na nossa frente a 200km/h, infelizmente isso eu não consigo impedir.</p>
-
-<p>Existe uma diferença grande entre a ansiedade e o trauma, eu acredito firmemente que conseguimos enfrentar a ansiedade (dependendo do caso sem remédios), acho que existem várias sintomas sociais hoje que transformam a gente nesse vaso transbordando de informação e obviamente quando vc ver algo transbordando vc fica desesperado para aquilo fazer parar.</p>
-
-<p><strong>Respirando</strong></p>
-
-<p>Agora o trauma é diferente… é um sentimento que chega, de uma situação que muitas vezes vc não tem controle e que pode vir de vários lugares diferentes. Talvez nem mesmo se dopando ajude, porque dopar não apaga memória, vc só deixa de sentir.</p>
-
-<p>E qual a raiz da ansiedade? Tem várias e quando identificada pode ajudar no tratamento… E quando sabemos a origem de um trauma? Ele transborda com os braços e pernas amarrados, não é só parar de sentir, é esquecer e como esquece?</p>
-
-<p><strong>Respirando</strong></p>
-
-<p>Não esquece.</p>
-
-<p>Você pode tentar não sentir, mas essa é a melhor solução?</p>
-
-<p>Já ouvi falar que trauma é uma ferida no cérebro e que demora para cicatrizar e mesmo quando cicatriza ela ainda está lá, ela nunca vai sair, talvez vire parte da sua identidade como a cicatriz de um pirata.</p>
-
-<p>Mas como sou novo e ainda não sei lidar com muitas coisas na vida eu acho que vou continuar só respirando, quem sabe assoprar o machucado não melhore mesmo.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="pessoal" /><summary type="html"><![CDATA[Acredito que tudo ao extremo é ruim, quando comemos muito, quando fazemos muito exercício ou quando fazemos de menos, fazemos nada para sair da cama ou para ter um pouco de vitamina D no corpo.]]></summary></entry></feed>
+<p>10/10, só quero dizer que a parte final do tutorial sobre <em>Troubleshooting</em> está desatualizada, está com uns caminhos nada a ver e acho que poderia ser resolvido ou pelo menos colocado em deprecated.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[O primeiro contato com o desenvolvimento para o kernel do linux foi um pouco tribulado. Não exatamente por causa do linux, mas muito pela falta de preparação minha para essa aula. Levei um computador que não mexia fazia alguns meses, onde todos os drivers estavam desatualizados, felizmente foi tranquilo ser resolvido, mas infelizmente demorou mais do que deveria.]]></summary></entry></feed>
