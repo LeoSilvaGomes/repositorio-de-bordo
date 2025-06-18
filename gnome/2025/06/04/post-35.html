@@ -88,19 +88,46 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>After some contribution from Andrew, we decided to sum power to make more contributions than just MR and we create one task (issue) based from the first MR from Andrew (https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/1644).</p>
+    <h3 id="mais-uma-contribuição">Mais uma contribuição</h3>
 
-<p>https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/3461</p>
+<p>Depois da minha primeira contribuição e vasculando um pouco mais o repositório do <strong>Settings Gnome</strong>, eu, Andrew e Gustavo decidimos fazer um trio para fazermos as próximas issues já que elas pareciam ser um pouco mais complexas!</p>
+
+<p>Então fizemos uma reunião e percebemos que a primeira contribuição que o Andrew fez com o Gustavo, poderia ser aplicado em outros contextos, essa contribuição seria para remover uma linha “invisivel” ao final de uma lista de itens (https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/1644). Ao invés de resolver de vez essa issue, decidimos criar uma issue e permitir que outros contribuidores possam fazer first touch na aplicação</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>**Network</td>
+      <td>Extra line below the Wi-Fi and VPN connections list** - https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/3461</td>
+    </tr>
+  </tbody>
+</table>
 
 <hr />
 
-<p>In the same time I decided to contribute in the new MR, about a toast at configurations at App section in Settings, this needed to be add because when you remove any configuration from any app we didn’t have any feedback to the final user.</p>
+<h3 id="segundo-mr">Segundo MR</h3>
 
-<p>First I decided to see how the Toast component was create in other sections, so I used as a example the Toast used when a background image was deleted.</p>
+<p>No mesmo caminho, como decidimos unir forças, continuamos com outra contribuição, sendo essa de adicionar um <em>toast</em> após a deleção de alguma configuração de qualquer app adicionado ao sistema. O que acontecia antes era a deleção dessa configuração sem nenhum feedback aparente, o que impossibilitava o usuário que refazer a exata ação que ele fez e de ter um feedback visual do que acabou de acontecer.</p>
 
-<p>So I added a list for the itens deleted and create the component with <code class="language-plaintext highlighter-rouge">AdwToast</code> to show the information, create 3 more functions, where one is to render the Toast the others 2 are to treat the callbacks from the toast bottoms.</p>
+<p>A primeira coisa que eu fiz para essa contribuição foi analisar o componente <code class="language-plaintext highlighter-rouge">Toast</code> que estava sendo usado em outros componentes pelo repositório, eu usei bastante de referência o <em>Toast</em> da deleção de um <em>Background</em>, onde ele usa o component <code class="language-plaintext highlighter-rouge">AdwToast</code> e faz um tratamento da quantidade de componentes que estão sendo deletados.</p>
+
+<p>Após isso eu criei minha primeira implementação… o resultado dela foi a criação de um <em>Toast</em> que informava a quantidade de deleção para cada tipo de arquivo, então recebi meu primeiro feedback no qual  do <strong>Felipe Borges</strong> com várias coisas para resolver no código e além disso com uma sugestão de não mostrar a quantidade e sim só deletar e se a pessoa deletar outra configuração a ultima desaparece e mostra a nova:</p>
+
+<p><img width="606" alt="Image" src="https://github.com/user-attachments/assets/005fc862-6968-4d29-b875-34ee7d166e7b" /></p>
+
+<p>Eu fiz essa alteração meio que contra gosto, porque eu gosto da ideia de contar os itens e ai veio o <strong>Matthijs Velsink</strong>, outro mantenedor e sugeriu que tirassemos a separação dos tipos e colocassemos apenas <em>type</em> e a quantidade de itens removidos, o que para mim foi ótimo e amei a sugestão.</p>
+
+<p><img width="607" alt="Image" src="https://github.com/user-attachments/assets/5d1d5bfc-c58b-40b3-8813-90ee45c7bc2b" /></p>
+
+<p>Então fui eu lá implementar novamente a segunda sugestão dos mantenedores e criar um novo commit, para que se eles decidirem por ir no caminho da primeira sugestão eu possa fazer um rollback e recuperar o qu eu tinha feito.</p>
+
+<p><img width="606" alt="Image" src="https://gitlab.gnome.org/-/project/660/uploads/f3c172d764d206b4986cad2b6157b263/Screenshot_from_2025-05-30_17-02-22.png" /></p>
+
+<p>Segue o link do MR:</p>
 
 <p>https://gitlab.gnome.org/GNOME/gnome-control-center/-/merge_requests/3156</p>
+
+<p>Acredito que como esse MR envolve muitas alterações ele possa demorar um pouco para ser aprovado, mas de qualquer forma eu achei a respostas dos mantenedores rápida e estou acompanhando as alterações para que eu consiga responde-los o mais rapido possivel.</p>
 
 
   </div>
