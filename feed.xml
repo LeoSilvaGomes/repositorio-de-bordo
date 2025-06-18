@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-06-18T17:39:59+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Reporter 🎉</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html" rel="alternate" type="text/html" title="Reporter 🎉" /><published>2025-06-18T17:39:19+00:00</published><updated>2025-06-18T17:39:19+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html"><![CDATA[<p>Desde a ultima atualização do MR do Toast o próximo update é sobre cobrar eles de revisar meu MR e ver se tem alguma coisa a mais que precisa ser feito:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-06-18T17:59:06+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Reporter 🎉</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html" rel="alternate" type="text/html" title="Reporter 🎉" /><published>2025-06-18T17:39:19+00:00</published><updated>2025-06-18T17:39:19+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html"><![CDATA[<p>Desde a ultima atualização do MR do Toast o próximo update é sobre cobrar eles de revisar meu MR e ver se tem alguma coisa a mais que precisa ser feito:</p>
 
 <p><img width="676" alt="Image" src="https://github.com/user-attachments/assets/1a2cb5f6-255d-49f9-9bc3-79ff7b6f53e9" /></p>
 
@@ -42,14 +42,7 @@
 
 <p>Então fizemos uma reunião e percebemos que a primeira contribuição que o Andrew fez com o Gustavo, poderia ser aplicado em outros contextos, essa contribuição seria para remover uma linha “invisivel” ao final de uma lista de itens (https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/1644). Ao invés de resolver de vez essa issue, decidimos criar uma issue e permitir que outros contribuidores possam fazer first touch na aplicação</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>**Network</td>
-      <td>Extra line below the Wi-Fi and VPN connections list** - https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/3461</td>
-    </tr>
-  </tbody>
-</table>
+<p><strong>Network Extra line below the Wi-Fi and VPN connections list</strong> - https://gitlab.gnome.org/GNOME/gnome-control-center/-/issues/3461</p>
 
 <hr />
 
@@ -69,7 +62,7 @@
 
 <p>Então fui eu lá implementar novamente a segunda sugestão dos mantenedores e criar um novo commit, para que se eles decidirem por ir no caminho da primeira sugestão eu possa fazer um rollback e recuperar o qu eu tinha feito.</p>
 
-<p><img width="606" alt="Image" src="https://gitlab.gnome.org/-/project/660/uploads/f3c172d764d206b4986cad2b6157b263/Screenshot_from_2025-05-30_17-02-22.png" /></p>
+<p><img width="1079" alt="Image" src="https://github.com/user-attachments/assets/e1467de5-8a01-48e9-a405-917cfbec565a" /></p>
 
 <p>Segue o link do MR:</p>
 
