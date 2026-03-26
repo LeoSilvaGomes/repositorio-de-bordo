@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2025-09-12T11:44:41+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Reporter 🎉</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html" rel="alternate" type="text/html" title="Reporter 🎉" /><published>2025-06-18T17:39:19+00:00</published><updated>2025-06-18T17:39:19+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html"><![CDATA[<p>Desde a ultima atualização do MR do Toast o próximo update é sobre cobrar eles de revisar meu MR e ver se tem alguma coisa a mais que precisa ser feito:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2026-03-26T14:24:33+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Jonan</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38.html" rel="alternate" type="text/html" title="Jonan" /><published>2026-03-26T14:23:45+00:00</published><updated>2026-03-26T14:23:45+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38.html"><![CDATA[<p>askjdhaksjdhaksjdhaksb
+a sjdhasjdhasjdaksd</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="Ubuntu" /><summary type="html"><![CDATA[askjdhaksjdhaksjdhaksb a sjdhasjdhasjdaksd]]></summary></entry><entry><title type="html">Reporter 🎉</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html" rel="alternate" type="text/html" title="Reporter 🎉" /><published>2025-06-18T17:39:19+00:00</published><updated>2025-06-18T17:39:19+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html"><![CDATA[<p>Desde a ultima atualização do MR do Toast o próximo update é sobre cobrar eles de revisar meu MR e ver se tem alguma coisa a mais que precisa ser feito:</p>
 
 <p><img width="676" alt="Image" src="https://github.com/user-attachments/assets/1a2cb5f6-255d-49f9-9bc3-79ff7b6f53e9" /></p>
 
@@ -336,39 +337,4 @@ drivers/gpu/drm/amd/display/dc/ <span class="nv">$ </span><span class="nb">ls</s
 
 <h3 id="comentários">Comentários</h3>
 
-<p>Foi muito tranquilo a contribuição em si, o que deu mais problema foi a questão de modificação e mudanças de rotas ocorridas nesse processo que ocasionou em mais configurações de ambiente. Além disso houve um atraso por parte da indisponibilidade da minha maquina remota por algum tempo, mas nada que não fosse resolvido um tempinho depois.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[Obs inicial: Esse relato faz parte da disciplina de Software Livre ministrada pelo Professor Paulo Meirelles dada no IME - USP. Alguns comentários são referentes a prazos que a própria disciplina delimita.]]></summary></entry><entry><title type="html">Mexendo com drivers ⚙️</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/26/post-28.html" rel="alternate" type="text/html" title="Mexendo com drivers ⚙️" /><published>2025-03-26T21:01:57+00:00</published><updated>2025-03-26T21:01:57+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/26/post-28</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/03/26/post-28.html"><![CDATA[<p>Como expectativa da aula, eu e minha dupla terminamos nossas coisas na aula e isso é muito bom porque trocamos experiências que tivemos fora da disciplina também. Derick estava me explicando um pouco mais sobre os <em>drivers</em> e isso foi muito bom para entender o exercicio no todo.</p>
-
-<p>Hoje fizemos um tutorial de criar um drive de character na árvore do <strong>iio</strong> (https://flusp.ime.usp.br/kernel/char-drivers-intro/). Só teve um momento que eu travei… no momento de buildar o modulo, onde quando fui copiar o arquivo <code class="language-plaintext highlighter-rouge">.ko</code> para dentro da <em>vm</em> acabei copiando para um arquivo e não para a pasta:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Errado sem o barra no final</span>
-<span class="nb">cp </span>simple_char.ko /lib/modules/<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-r</span><span class="sb">`</span>/kernel/drivers/char
-</code></pre></div></div>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Certo com o barra no final</span>
-<span class="nb">cp </span>simple_char.ko /lib/modules/<span class="sb">`</span><span class="nb">uname</span> <span class="nt">-r</span><span class="sb">`</span>/kernel/drivers/char/
-</code></pre></div></div>
-
-<p>Após isso foi muito tranquilo terminar o tutorial… por fim ao rodar os arquivos <code class="language-plaintext highlighter-rouge">.c</code> o buffer rodou umas saidas estranhas, os monitores (David e Rafael) respoderam que pode ser algo da execução da <em>vm</em>.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@localhost:~# ./read_prog simple_char_node
-Read buffer: ���
-root@localhost:~# ./write_prog simple_char_node
-Error: 9wrote <span class="nt">-1</span> bytes to buffer
-</code></pre></div></div>
-
-<p>Mas finalizaram que tava tudo certo, que no final tanto o <em>driver</em> que criamos quando o código estão <strong>10</strong>.</p>
-
-<hr />
-
-<h3 id="sugestões-de-correções">Sugestões de correções</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@host
-aarch64-linux-gnu-gcc read_prog.c <span class="nt">-o</span> read_prog
-scp read_prog root@&lt;VM-IP-ADDRESS&gt;:~/
-@VM
-root@localhost:~# ./read_prog simple_char_node
-</code></pre></div></div>
-
-<p>Esse código em cima não segue uma consistência dos outros tutoriais, acredito que deva separar entre o que é rodado no host e o que é rodado na VM</p>
-
-<p>Além disso, como o tutorial é para primeiro contato do desenvolvedor acredito que pode ser referenciado os arquivos de tutoriais anteriores quando necessário, como no momento em que precisamos copiar o modulo para dentro da <em>vm</em> e <em>buildar</em>.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[Como expectativa da aula, eu e minha dupla terminamos nossas coisas na aula e isso é muito bom porque trocamos experiências que tivemos fora da disciplina também. Derick estava me explicando um pouco mais sobre os drivers e isso foi muito bom para entender o exercicio no todo.]]></summary></entry></feed>
+<p>Foi muito tranquilo a contribuição em si, o que deu mais problema foi a questão de modificação e mudanças de rotas ocorridas nesse processo que ocasionou em mais configurações de ambiente. Além disso houve um atraso por parte da indisponibilidade da minha maquina remota por algum tempo, mas nada que não fosse resolvido um tempinho depois.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[Obs inicial: Esse relato faz parte da disciplina de Software Livre ministrada pelo Professor Paulo Meirelles dada no IME - USP. Alguns comentários são referentes a prazos que a própria disciplina delimita.]]></summary></entry></feed>
