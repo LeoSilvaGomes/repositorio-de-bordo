@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2026-03-26T14:37:50+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Jonan</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38.html" rel="alternate" type="text/html" title="Jonan" /><published>2026-03-26T14:23:45+00:00</published><updated>2026-03-26T14:23:45+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38.html"><![CDATA[<p>askjdhaksjdhaksjdhaksb
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml" rel="self" type="application/atom+xml" /><link href="https://leosilvagomes.github.io/repositorio-de-bordo/" rel="alternate" type="text/html" /><updated>2026-03-26T19:34:51+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/feed.xml</id><title type="html">Repositório de Bordo</title><subtitle>Para aqueles (ou eu) que estão lendo... aqui não é estático, é fluxo de avanço e regresso.</subtitle><entry><title type="html">Aula sobre DevOps</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/aula/2026/03/26/post-39.html" rel="alternate" type="text/html" title="Aula sobre DevOps" /><published>2026-03-26T19:34:00+00:00</published><updated>2026-03-26T19:34:00+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/aula/2026/03/26/post-39</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/aula/2026/03/26/post-39.html"><![CDATA[<p>apresentação tal</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="aula" /><summary type="html"><![CDATA[apresentação tal]]></summary></entry><entry><title type="html">Jonan</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38.html" rel="alternate" type="text/html" title="Jonan" /><published>2026-03-26T14:23:45+00:00</published><updated>2026-03-26T14:23:45+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/ubuntu/2026/03/26/post-38.html"><![CDATA[<p>askjdhaksjdhaksjdhaksb
 a sjdhasjdhasjdaksd</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="Ubuntu" /><summary type="html"><![CDATA[askjdhaksjdhaksjdhaksb a sjdhasjdhasjdaksd]]></summary></entry><entry><title type="html">Reporter 🎉</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html" rel="alternate" type="text/html" title="Reporter 🎉" /><published>2025-06-18T17:39:19+00:00</published><updated>2025-06-18T17:39:19+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/gnome/2025/06/18/post-37.html"><![CDATA[<p>Desde a ultima atualização do MR do Toast o próximo update é sobre cobrar eles de revisar meu MR e ver se tem alguma coisa a mais que precisa ser feito:</p>
 
 <p><img width="676" alt="Image" src="https://github.com/user-attachments/assets/1a2cb5f6-255d-49f9-9bc3-79ff7b6f53e9" /></p>
@@ -254,87 +254,4 @@ Signed-off-by: Derick Frias &lt;<span class="o">[</span>derick.william.moraes@gm
 <p>Depois dessa revisão já fiz os ajustes e já recebi a aprovação do monitor. Por fim enviei para o mantenedores do modulo e que vão realmente revisar o meu patch com o comando:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kw send-patch <span class="nt">--send</span> <span class="nt">-1</span> <span class="nt">--cc</span><span class="o">=</span>leonardodasigomes@gmail.com <span class="nt">--cc</span><span class="o">=</span>derick.william.moraes@gmail.com
-</code></pre></div></div>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[Após o envio do patch para o email freesoftware2025@gmail.com que corresponde ao email da disciplina, recebi meu primeiro review.]]></summary></entry><entry><title type="html">First patch ⭐ - Adjust prefix of dcn31_apg construct function name</title><link href="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29.html" rel="alternate" type="text/html" title="First patch ⭐ - Adjust prefix of dcn31_apg construct function name" /><published>2025-04-03T17:51:29+00:00</published><updated>2025-04-03T17:51:29+00:00</updated><id>https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29</id><content type="html" xml:base="https://leosilvagomes.github.io/repositorio-de-bordo/kernel/2025/04/03/post-29.html"><![CDATA[<p><strong>Obs inicial:</strong> Esse relato faz parte da disciplina de Software Livre ministrada pelo Professor Paulo Meirelles dada no IME - USP. Alguns comentários são referentes a prazos que a própria disciplina delimita.</p>
-
-<p>Finalmente chegamos na nossa contribuição para o kernel, depois de fazer várias configurações e decidir utilizar o <em>iio</em> (em primeiro momento).</p>
-
-<p><code class="language-plaintext highlighter-rouge">Por volta da primeira semana de abril</code>
-Eu e minha dupla começamos a passar pelo <em>pad</em> de contribuição e vimos algumas contribuições bem tranquilas. Nosso primeiro contato foi com o ajuste de algumas funções em alguma parte do modulo. Rodamos <code class="language-plaintext highlighter-rouge">git grep &lt;o nome da função&gt;</code> que queriamos modificar e acabamos encontrando algumas coisas que poderiam ser modificadas, entramos em contato com o monitor e ele nos orientou a continuar explorando e esperar pela proxima aula para acompanharmos a questão do envio do patch.</p>
-
-<p>Esperado a aula, minha dupla pode comparecer a disciplina e eu estava em um evento, nesse sentido após a aula me reuni com minha dupla para receber orientações de próximo passo e foi decidido que iriamos fazer alterações agora em outra parte do kernel… agora sendo o <em>drm</em> o nosso foco.</p>
-
-<p>Nesse momento entramos de férias (voltei para minha cidade natal e deixei minha maquina com linux ligada para acessar remotamente), tentei iniciar a contribuição, mas de primeiro eu não consegui acessar o pad, então entrei em contato com o monitor que me ajudou enviando o pdf do pad. A partir desse ponto eu consegui iniciar algumas coisas a respeito de clonar a nova ramificação, fazer a procura dos arquivos necessários para a modificação do problema que meu amigo tinha escolhido que no caso era <code class="language-plaintext highlighter-rouge">Code Refactor: Add prefix to DC functions to improve the debug with ftrace</code>.</p>
-
-<hr />
-
-<h3 id="vamos-começar-a-contribuição">Vamos começar a contribuição</h3>
-
-<p>Depois de preparar o ambiente para agora sim contribuir na ramificação certa, no caso o <em>drm</em>, eu consegui fazer um <code class="language-plaintext highlighter-rouge">git grep dcn</code> que foi uma das indicações dos monitores para alteração.</p>
-
-<p>Apareceu bastante resultado e acabei indo no olho para ver qual funcionava melhor, fui passando por vários arquivos e encontrei dois que poderiam funcionar:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> drivers/gpu/drm/amd/display/dc/dcn31/dcn31_apg.c
-<span class="o">&gt;</span> drivers/gpu/drm/amd/display/dc/dccg/dcn20/dcn20_dccg.c
-</code></pre></div></div>
-
-<p>Confirmei com o eu amigo sobre a minha hipotese e disse para a gente ir tentando cada um em um para a gente infrentar a barreiras e ir falando para o outro a cada passo…</p>
-
-<p><strong>Obs blackout:</strong> Como eu estava remoto eu estava com medo de meu computador desligar, então o dia chegou, no meio da minha visita a minha família eu fiquei off ao meu progresso, mas já tinha dado passos bem interessantes.</p>
-
-<p>Quando voltei a São Paulo, retomei o desenvolvimento e percebi um erro que não tinha notado, o <em>drm</em> não estava <em>buildando</em>, falei com o monitor e ele me disse que isso era problema com a arquitetura da vm, que no caso estava como <code class="language-plaintext highlighter-rouge">arm64</code>, fiz a modificação das configs para rodar em <code class="language-plaintext highlighter-rouge">x86_64</code> rodando:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kw init <span class="nt">--template</span>
-<span class="o">&gt;</span> make <span class="nv">ARCH</span><span class="o">=</span>x86_64 allnoconfig 
-</code></pre></div></div>
-
-<p>Após isso, consegui buildar o <em>drm</em> tranquilamente e comecei as modificações do arquivo <code class="language-plaintext highlighter-rouge">dcn31_apg</code>, mudei então a função <code class="language-plaintext highlighter-rouge">construct</code> que era a função que estava com o nome faltando informação para o <em>ftrace</em>, a função estava com a declaração como <code class="language-plaintext highlighter-rouge">apg31_construct</code> e foi modificada para <code class="language-plaintext highlighter-rouge">dcn31_apg_construct</code>. modifiquei no <code class="language-plaintext highlighter-rouge">.c</code> e no <code class="language-plaintext highlighter-rouge">.h</code> como vi em um exemplo que o monitor compartilhou.</p>
-
-<p>Então após as modificações eu habilitei todas as dependencias e modulos para que eu conseguisse testar minhas alterações, modifiquei pelo <em>kw</em> com o comando <code class="language-plaintext highlighter-rouge">kw build --menu</code>. Nesse momento eu fiz a busca pelo <code class="language-plaintext highlighter-rouge">F8</code> e procurei pelo <code class="language-plaintext highlighter-rouge">DRM_AMD_DC</code>, <em>config</em> que minha alteração fazia parte, descobri que essa <em>config</em> apenas caminha pelo <em>path</em> de onde minha alteração estava até encontrar um arquivo <code class="language-plaintext highlighter-rouge">Kconfig</code>, ou seja:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>drivers/gpu/drm/amd/display/dc/dcn31
-drivers/gpu/drm/amd/display/dc/dcn31/ <span class="nv">$ </span><span class="nb">cd</span> ..
-drivers/gpu/drm/amd/display/dc/ <span class="nv">$ </span><span class="nb">ls</span>                <span class="c"># não encontrei Kconfig, repete cd .. até encontrar</span>
-</code></pre></div></div>
-
-<p>Após habilitado, rodei o build e pela minha surpresa e felicidade deu erro ⭐ , significa que o modulo foi habilitado e que agora eu tinha algumas coisas para ajustar, então segue o passo a passo do que aconteceu:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Erro nos arquivos que dependem da função alterada</th>
-      <th style="text-align: left"><code class="language-plaintext highlighter-rouge">git grep</code> para buscar arquivos que preciso modificar</th>
-      <th style="text-align: left">Resultado das alterações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/e7aa291a-9981-434d-bf66-5d53b6cedd05" alt="Image" /></td>
-      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/1b76e7ba-7598-421a-8f2d-cb946144d194" alt="Image" /></td>
-      <td style="text-align: left"><img src="https://github.com/user-attachments/assets/d8394a7d-b19d-4412-b572-93143d84c93f" alt="Image" /></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Então após fazer as correções eu fiz o:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> git add <span class="nb">.</span>
-<span class="o">&gt;</span> git commit                       <span class="c"># escrevi a mensagem detalhada</span>
-</code></pre></div></div>
-
-<p>Após refazer a mensagem de commit várias vezes até ficar satisfeito eu rodei o comando para enviar o email:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kw send-patch <span class="nt">--send</span> <span class="nt">-1</span> <span class="nt">--simulate</span> <span class="nt">--private</span> <span class="nt">--to</span><span class="o">=</span>freesoftware2025@gmail.com
-</code></pre></div></div>
-
-<p>🎉  AEEE tudo certo ~Infelizmente não~</p>
-
-<p>Eu tinha deixado o <code class="language-plaintext highlighter-rouge">--simulate</code>no comando e não tinha percebido que na verdade eu não tinha enviado e apenas simulado o envio, então eu finalmente removi esse <em>flag</em> fiz as configurações do <em>smtp</em> que precisava e do meu email google (com a ajuda do monitor) e finalmente consegui enviar com o comando:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kw send-patch <span class="nt">--send</span> <span class="nt">-1</span> <span class="nt">--private</span> <span class="nt">--to</span><span class="o">=</span>freesoftware2025@gmail.com <span class="nt">--cc</span><span class="o">=</span>leonardodasigomes@gmail.com
-</code></pre></div></div>
-
-<hr />
-
-<h3 id="comentários">Comentários</h3>
-
-<p>Foi muito tranquilo a contribuição em si, o que deu mais problema foi a questão de modificação e mudanças de rotas ocorridas nesse processo que ocasionou em mais configurações de ambiente. Além disso houve um atraso por parte da indisponibilidade da minha maquina remota por algum tempo, mas nada que não fosse resolvido um tempinho depois.</p>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[Obs inicial: Esse relato faz parte da disciplina de Software Livre ministrada pelo Professor Paulo Meirelles dada no IME - USP. Alguns comentários são referentes a prazos que a própria disciplina delimita.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>LeoSilvaGomes</name></author><category term="kernel" /><summary type="html"><![CDATA[Após o envio do patch para o email freesoftware2025@gmail.com que corresponde ao email da disciplina, recebi meu primeiro review.]]></summary></entry></feed>
